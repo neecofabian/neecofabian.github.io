@@ -10,6 +10,31 @@ h1 {
     text-align: center;
 }
 
+.programmer {
+    display: center;
+    background: red;
+}
+
+.projects {
+    display: inline-block;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    translate: -50% -50%;
+}
+
+.project {
+    background: #1c1d1f;
+    padding: 30px;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+
 /* .fullscreen {
     position: fixed;
     top: 0;
