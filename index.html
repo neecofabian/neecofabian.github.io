@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neeco Fabian</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="script.js" defer></script>
+    <!-- <script src="https://cdn.rawgit.com/wnda/pivot/master/pivot.js"></script>
+    <script>pivot.init({selector: ".projects", perspective: 500});</script> -->
 </head>
 <body>
-
     <!--Home-->
-    <header>
-        <h1>Hello, I'm<br><span class="bigger">neeco</span></h1>
+    <header class="top">
         
+        <h1>Hello, I'm<br><span class="bigger">neeco</span></h1>
+        <div class="arrow bounce"></div>
+
         <!--Menu-->
         <!-- <button class="nav-toggle" aria-label="Toggle navigation">
             <span class="hamburger"></span>
@@ -25,82 +30,94 @@
                 <li class="nav__item"><a href="#replier" class="nav__link">Replier</a></li>
             </ul> -->
     </header>
-
-
-
+    
     <!--Programmer-->
     <section class="programmer" id="programmer">
-        <h2>I'm a programmer.</h2>
+        <h2 data-aos="fade-up">I'm a programmer.</h2>
         
         <!--Projects-->
         <h3>Here are some of my projects.</h3>
         
         <div class="projects">
             <div class="project">
-                <h3>Illuminote</h3>
-                <p>A Mixed Reality multiplayer game in the dark.</p>
-                <ul>
-                    <li>Place sticky notes on TV, projector screen, or monitor.</li>
-                    <li>Scan your custom map with a phone.</li>
-                    <li>Teleport and bounce bullets using the sticky notes.</li>
-                    <li>Hide in the dark and find the enemy by firing glowing bullets.</li>
-                    <li>Shoot your opponent to win!</li>
-                    <br>
-                    <li>Made with Python, OpenCV</li>
-                    <li>Made at Hack the North 2020++</li>
-                </ul>
-                <a href="https://github.com/neecofabian/Illuminote">Learn more</a>
+                <div class="project-content" id="illuminote-content">
+                    <h3>Illuminote</h3>
+                    <p>A Mixed Reality multiplayer game in the dark.</p>
+                    <ul>
+                        <li>Place sticky notes on TV, projector screen, or monitor.</li>
+                        <li>Scan your custom map with a phone.</li>
+                        <li>Teleport and bounce bullets using the sticky notes.</li>
+                        <li>Hide in the dark and find the enemy by firing glowing bullets.</li>
+                        <li>Shoot your opponent to win!</li>
+                        <br>
+                        <li>Made with Python, OpenCV</li>
+                        <li>Made at Hack the North 2020++</li>
+                    </ul>
+                    <a class="project-button" href="https://github.com/neecofabian/Illuminote" target="_blank">Learn more</a>
+                    <a class="project-button" href="https://github.com/neecofabian/Illuminote" target="_blank">Watch demo</a>
+                </div>
+                <img class="project-logo" src="images/illuminote_glow_logo.png">
             </div>
 
-            <div class="project">
-                <h3>Lax</h3>
-                <p>A relaxation and productivity centre.</p>
-                <ul>
-                    <li>Breathe - follow visual breathing exercises.</li>
-                    <li>Release - jot worries and release when ready.</li>
-                    <li>Remember - create flash cards.</li>
-                    <li>Secured under password protection.</li>
-                    <li>Toggle between light and dark mode.</li>
-                    <br>
-                    <li>Made with JavaFX</li>
-                </ul>
-                <a href="https://github.com/neecofabian/Lax">Learn more</a>
+            <div class="project" id="conference-manager">
+                <div class="project-content" id="conference-manager-content">
+                    <h3>Conference Manager</h3>
+                    <p>A hub for managing large conferences.</p>
+                    <ul>
+                        <li>Join as an organizer, attendee, or speaker.</li>
+                        <li>Sign up for events and view a sorted schedule.</li>
+                        <li>Network with attendees, speakers, and organizers in the messenger.</li>
+                        <li>Get suggestions when creating events, rooms and amenities.</li>
+                        <li>See conference statistics.</li>
+                        <li>Receive event reminders.</li>
+                        <li>Join the conference Discord server.</li>
+                        <br>
+                        <li>Made with Java, Twilio, Discord API</li>
+                        <li>Made by 8 students remotely using Git</li>
+                    </ul>
+                    <a class="project-button" href="https://github.com/neecofabian/Conference-Manager" target="_blank">Learn more</a>
+                </div>
+                <img class="project-logo" src="images/conference_manager_colour_logo.png">
             </div>
 
-            <div class="project">
-                <h3>Conference Manager</h3>
-                <p>A hub for managing large conferences.</p>
-                <ul>
-                    <li>Join as an organizer, attendee, or speaker.</li>
-                    <li>Sign up for events and view a sorted schedule.</li>
-                    <li>Network with attendees, speakers, and organizers in the messenger.</li>
-                    <li>Get suggestions when creating events, rooms and amenities.</li>
-                    <li>See conferenxce statistics.</li>
-                    <li>Receive event reminders.</li>
-                    <li>Join the conference Discord server.</li>
-                    <br>
-                    <li>Made with Java, Twilio, Discord API</li>
-                    <li>Made by 8 students remotely using Git</li>
-                </ul>
-                <a href="https://github.com/neecofabian/Conference-Manager">Learn more</a>
+            <div class="project" id="lax">
+                <div class="project-content" id="lax-content">
+                    <h3>Lax</h3>
+                    <p>A relaxation and productivity centre.</p>
+                    <ul>
+                        <li>Breathe - follow visual breathing exercises.</li>
+                        <li>Release - jot worries and release when ready.</li>
+                        <li>Remember - create flash cards.</li>
+                        <li>Secured under password protection.</li>
+                        <li>Toggle between light and dark mode.</li>
+                        <br>
+                        <li>Made with JavaFX</li>
+                    </ul>
+                    <a class="project-button" href="https://github.com/neecofabian/Lax" target="_blank">Learn more</a>
+                </div>
+                <img class="project-logo" id="lax-logo" src="images/lax_white_logo.png">
             </div>
 
-            <div class="project">
-                <h3>Senso</h3>
-                <p>An app to fidget and focus.</p>
-                <ul>
-                    <li>Tilt the phone to steer the ball.</li>
-                    <li>Feel the haptic feedback.</li>
-                    <li>Toggle the volume buttons for more vibrations.</li>
-                    <li>Calibrate the ball using the screen.</li>
-                    <br>
-                    <li>Made with Java, Android Studio</li>
-                    <li>Made at Hack the North 2019</li>
-                </ul>
-                <a href="https://github.com/neecofabian/Senso">Learn more</a>
-                <br>
-                <a href="https://play.google.com/store/apps/details?id=com.kateallsebrook.fidgetball">Free in the Google Play Store</a>
+            <div class="project" id="senso">
+                <div class="project-content" id="senso-content">
+                    <h3>Senso</h3>
+                    <p>An app to fidget and focus.</p>
+                    <ul>
+                        <li>Tilt the phone to steer the ball.</li>
+                        <li>Feel the haptic feedback.</li>
+                        <li>Toggle the volume buttons for more vibrations.</li>
+                        <li>Calibrate the ball using the screen.</li>
+                        <br>
+                        <li>Made with Java, Android Studio</li>
+                        <li>Made at Hack the North 2019</li>
+                    </ul>
+                    <a class="project-button" href="https://github.com/neecofabian/Senso" target="_blank">Learn more</a>
+                    <a class="project-button" href="https://play.google.com/store/apps/details?id=com.kateallsebrook.fidgetball" target="_blank">Get</a>
+                </div>
+                <img class="project-logo" src="images/senso_white_logo.png">
             </div>
+            <div class="break"></div> 
+            <a class="all-projects-button" href="https://github.com/neecofabian" target="_blank">All my projects</a>
         </div>
         
         <!--Tool Box-->
@@ -122,14 +139,12 @@
         University of Toronto
     </div> -->
 
-
-
-
-
-
-    <!-- <div class="fullscreen">
-        Test.
-    </div> -->
+    <!-- Animations -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+    
 
 </body>
 </html>
