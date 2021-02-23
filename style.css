@@ -55,7 +55,7 @@ h2 {
 }
 
 h3 {
-    font-size: 25px;
+    font-size: 35px;
     font-weight: bold;
     margin-top:0;
 }
@@ -78,10 +78,12 @@ h3 {
     
     background: rgb(212, 212, 212);
     color: black;
+    opacity: 0;
     font-weight: bold;
     text-decoration: none;
     text-align: center;   
     position: bottom;
+    transition: 0.2s;
 }
   
 .project-button:hover {
@@ -104,6 +106,7 @@ h3 {
 
 .project {
     display: flex;
+    flex-direction: column;
     background: #131314;
     color: white;
     width: 50%;
@@ -114,6 +117,7 @@ h3 {
     line-height: 150%;
     max-width: 500px;
     position: relative;
+    justify-content: space-between;
 }
 
 .project-logo {
@@ -136,8 +140,14 @@ h3 {
 
 .project:hover .project-content {
     opacity: 1;
-    transition: 0.4s;
+    transition: 0.2s;
 }
+
+.project:hover .project-button {
+    opacity: 1;
+    transition: 0.2s;
+}
+
 .project:hover .project-logo {
     opacity: 0;
     transition: 0.2s;
@@ -162,11 +172,38 @@ h3 {
     border-radius: 30px;
     padding: 20px 30px 20px 30px;
     margin: 20px;
+    transition: 0.2s;
 }
 
 .all-projects-button:hover {
     background: white;
     color: #1a1a1b;
+}
+
+#toolbox {
+    position: relative;
+    top: 170px;
+    left: 170px;
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+    perspective: 800px;
+    transform-style: preserve-3d;
+}
+
+/* https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-using-only-css */
+#flap {
+    position: absolute;
+    background:#131314;
+    width: 300px;
+    height: 150px;
+    transform-origin: 0 0;
+    transition: transform 0.5s 0.5s;
+    border-radius: 30px;
+}
+#toolbox:hover #flap {
+    transform: rotateX(170deg);
+    transition: transform 0.5s 0.5s;
 }
 
 /* .project-content:not(:hover) {
