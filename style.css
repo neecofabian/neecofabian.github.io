@@ -102,7 +102,7 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 50px;
 }
 
@@ -130,17 +130,17 @@ h3 {
 
     .project {
         min-width: 80vw;
-        padding: 20px;
+        padding: 25px;
         margin: 10px;
     }
 
     .project-content {
-        margin: 5px;
+        margin: 2px;
     }
 }
 
 .project-logo {
-    width: 60%;
+    width: 75%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -172,7 +172,7 @@ h3 {
 }
 
 #lax-logo {
-    width: 30%;
+    width: 40%;
 }
 
 .project-content {
