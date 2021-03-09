@@ -25,9 +25,15 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    body{
+    body {
         padding-left: 5%;
         padding-right: 5%;
+    }
+
+    .project {
+        padding: 10px;
+        margin: 5px;
+        min-width: 70vw;
     }
 }
 
@@ -108,7 +114,7 @@ h3 {
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 50px;
-    padding: 9px;
+    padding: 5px;
 }
 
 .project {
@@ -128,7 +134,7 @@ h3 {
 }
 
 .project-logo {
-    width: 60%; /* make the size dynamic */
+    width: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
