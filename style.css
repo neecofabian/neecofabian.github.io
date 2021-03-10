@@ -297,10 +297,24 @@ h3 {
     padding: 50px;
     border-radius: 30px;
 }
+
+#handle {
+    /* display: inline-block; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    height: 35px;
+    background: linear-gradient(to right, rgb(30, 30, 30), rgb(10, 10, 10), rgb(30, 30, 30));
+    box-shadow: 0 0 20px rgb(102, 1, 1);
+    border-radius: 20px;
+}
+
 /* https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-using-only-css */
 #flap {
     position: absolute;
-    background:darkred;
+    background: darkred;
     width: 100%;
     height: 100%;
     transform-origin: 0 0;
@@ -308,6 +322,7 @@ h3 {
     border-radius: 30px;
     /* transition: 0.5s; */
 }
+
 #toolbox:hover #flap {
     transform: rotateX(170deg);
     transition: transform 0.5s 0.5s;
@@ -315,6 +330,80 @@ h3 {
     /* transition: 0.5s; */
 }
 
+/* 
+#toolbox:hover #handle {
+    opacity: 0%;
+} */
+
+/* TODO: handle disappear */
+
 /* .project-content:not(:hover) {
     opacity: 0;
 } */
+
+
+
+/* box flap test */
+#box {
+  position: relative;
+  top: 170px;
+  left: 170px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+#flap1, #flap2, #flap3, #flap4 {
+  position: absolute;
+}
+#flap1 {
+  background-color: red;
+  width: 150px;
+  height: 300px;
+  z-index: 1;
+  transform: translateZ(1px);
+  transform-origin: 0 0;
+  transition: transform 1s 1.5s;
+}
+#flap2 {
+  left: 150px;
+  background-color: blue;
+  width: 150px;
+  height: 300px;
+  z-index: 1;
+  transform: translateZ(1px);
+  transform-origin: 100% 0;
+  transition: transform 1s ease 1s;
+}
+#flap3 {
+  background-color: green;
+  width: 300px;
+  height: 150px;
+  transform-origin: 0 0;
+  transition: transform 1s ease 0.5s;
+}
+#flap4 {
+  background-color: yellow;
+  top: 150px;
+  width: 300px;
+  height: 150px;
+  transform-origin: 0 100%;
+  transition: transform 1s ease;
+}
+#box:hover #flap1 {
+  transform: rotateY(-170deg) translateZ(1px);
+  transition: transform 1s ease;
+}
+#box:hover #flap2 {
+  transform: rotateY(170deg) translateZ(1px);
+  transition: transform 1s ease 0.5s;
+}
+#box:hover #flap3 {
+  transform: rotateX(170deg);
+  transition: transform 1s ease 1s;
+}
+#box:hover #flap4 {
+  transform: rotateX(-170deg);
+  transition: transform 1s ease 1.5s;
+}
