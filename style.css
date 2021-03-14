@@ -309,6 +309,7 @@ h3 {
     background: linear-gradient(to right, rgb(30, 30, 30), rgb(10, 10, 10), rgb(30, 30, 30));
     box-shadow: 0 0 20px rgb(102, 1, 1);
     border-radius: 20px;
+    transition-delay: 0.6s;
 }
 
 /* https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-using-only-css */
@@ -326,23 +327,17 @@ h3 {
 #toolbox:hover #flap {
     transform: rotateX(170deg);
     transition: transform 0.5s 0.5s;
+    background: green;
     /* opacity: 75%; */
     /* transition: 0.5s; */
 }
 
-#flap:hover #flap {
-    transform: rotateX(170deg);
-    transition: transform 0.5s 0.5s;
-    /* opacity: 75%; */
-    /* transition: 0.5s; */
-}
-
-/* 
 #toolbox:hover #handle {
     opacity: 0%;
-} */
-
-/* TODO: handle disappear */
+    transition-delay: 0.6s;
+    /* transform: rotateX(170deg); */
+    /* transition: transform 0.5s 0.5s; */
+}
 
 /* .project-content:not(:hover) {
     opacity: 0;
