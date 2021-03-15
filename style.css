@@ -339,6 +339,19 @@ h3 {
     /* transition: transform 0.5s 0.5s; */
 }
 
+@media only screen and (max-width: 500px) {
+    #toolbox:active #flap {
+        transform: rotateX(170deg);
+        transition: transform 0.5s 0.5s;
+        background: blue;
+    }
+    
+    #toolbox:active #handle {
+        opacity: 0%;
+        transition-delay: 0.6s;
+    }
+}
+
 /* .project-content:not(:hover) {
     opacity: 0;
 } */
