@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <!-- <script src="https://cdn.rawgit.com/wnda/pivot/master/pivot.js"></script>
     <script>pivot.init({selector: ".projects", perspective: 500});</script> -->
 </head>
@@ -34,7 +35,8 @@
     
     <!--Programmer-->
     <section class="programmer" id="programmer">
-        <h2 data-aos="fade-up">I'm a programmer.</h2>
+        <!-- <h2 data-aos="fade-up">I'm a programmer.</h2> -->
+        <h2>I'm a programmer.</h2>
         
         <!--Projects-->
         <h3>Here are some of my projects.</h3>
@@ -42,7 +44,7 @@
         <div class="projects">
             <div class="project">
                 <div class="project-content" id="illuminote-content">
-                    <h3><span id="illuminote-title-blue">Illumi</span><span id="illuminote-title-pink">note</span></h3>
+                    <h3><span class="project-title" id="illuminote-title-blue">Illumi</span><span class="project-title" id="illuminote-title-pink">note</span></h3>
                     <p>A Mixed Reality multiplayer game in the dark.</p>
                     <ul>
                         <li>Place sticky notes on TV, projector screen, or monitor.</li>
@@ -64,7 +66,7 @@
 
             <div class="project" id="conference-manager">
                 <div class="project-content" id="conference-manager-content">
-                    <h3><span id="con-man-title">Conference Manager</span></h3>
+                    <h3><span class="project-title" id="con-man-title">Conference Manager</span></h3>
                     <p>A hub for managing large conferences.</p>
                     <ul>
                         <li>Join as an organizer, attendee, or speaker.</li>
@@ -85,7 +87,7 @@
 
             <div class="project" id="lax">
                 <div class="project-content" id="lax-content">
-                    <h3><span id="lax-title">Lax</span></h3>
+                    <h3><span class="project-title" id="lax-title">Lax</span></h3>
                     <p>A relaxation and productivity centre.</p>
                     <ul>
                         <li><b>Breathe</b> - follow visual breathing exercises.</li>
@@ -103,7 +105,7 @@
 
             <div class="project" id="senso">
                 <div class="project-content" id="senso-content">
-                    <h3>Senso</h3>
+                    <span class="project-title"><h3>Senso</h3></span>
                     <p>An app to fidget and focus.</p>
                     <ul>
                         <li>Tilt the phone to steer the ball.</li>
@@ -145,16 +147,46 @@
         
     </section>
 
-    <!-- <div class="learner">
+    <!--Programmer-->
+    <section class="programmer" id="programmer">
         <h2>I'm a learner.</h2>
-        University of Toronto
-    </div> -->
+        <h3>Third year student at the University of Toronto.</h3>
+
+        <div class="courses">
+            <div class="course" id="csc108">
+                <div class="course-title">CSC108</div>
+                <div class="course-content">
+                    <span class="inner-course-title">CSC108</span>
+                    <span class="course-name">Intro to Computer Programming</span>
+
+                    <div class="marquee">
+                        <div class="marquee-left1">&nbsp;<b>Programming fundamentals</b> • loops • data types • functions • classes • </div>
+                        <div class="marquee-left2">&nbsp;<b>Programming fundamentals</b> • loops • data types • functions • classes • </div>
+                    </div>
+
+                    <div class="marquee">
+                        <div class="marquee-right1">&nbsp;Hello • my • name is • Neeco • and this is • to make • line • longer • </div>
+                        <div class="marquee-right2">&nbsp;Hello • my • name is • Neeco • and this is • to make • line • longer • </div>
+                    </div>
+                    <!-- <div class="marquee-right">Data Structures (Lists, Tuples, Dictionaries)</div>
+                    <div class="marquee-left">Runtime Analysis (Big-O notation)</div>
+                    <div class="marquee-right">File Input/Output</div>
+                    <div class="marquee-left">Unit Tests</div> -->
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </section>
 
     <!-- Animations -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
     AOS.init();
-    </script>
+    </script> -->
     
 
 </body>

@@ -1,0 +1,1 @@
+$('.course').width($('.marquee-left1').width());
