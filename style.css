@@ -389,7 +389,7 @@ h3 {
 }
 
 .marquee {
-    font-size: 16px;
+    font-size: 14px;
     opacity: 0.5;
     margin: 5px 0px 5px 0px;
     overflow: hidden;
@@ -458,7 +458,7 @@ h3 {
     }
 
     .course {
-        min-width: 80vw;
+        min-width: 100px;
         max-width: 400px;
     }
 
