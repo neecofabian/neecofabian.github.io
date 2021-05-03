@@ -458,9 +458,11 @@ h3 {
     }
 
     .course {
-        min-width: 200px;
+        /* min-width: 200px;
         max-width: 300px;
-        width: 80vw;
+        width: 80vw; */
+
+        min-width: 80vw;
     }
 
     .course-wrapper { margin: 10px; }
