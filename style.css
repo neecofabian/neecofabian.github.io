@@ -323,46 +323,8 @@ h3 {
     opacity: 0;
 } */
 
-/* For smaller screens */
-@media only screen and (max-width: 750px) {
-    body {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .project {
-        min-width: 80vw;
-        padding: 25px;
-        margin: 10px;
-    }
-
-    .project-title { font-size: 30px; }
-    .project-content { margin: 2px; }
-
-    #toolbox {
-        min-width: 80vw;
-        width: 50%;
-        height: 50%;
-    }
-
-    .course {
-        min-width: 80vw;
-        max-width: 400px;
-    }
-/* 
-    .course:not(:hover) .course-content {
-        opacity: 1;
-        transition: 0.2s;
-    } */
-
-    .course-wrapper { margin: 10px; }
-    /* .course-title { display: none; } */
-}
-
-
-/* COURSES section */
+/* COURSES SECTION */
 .courses {
-    background: blue;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -375,7 +337,6 @@ h3 {
 .course-wrapper {
     justify-content: center;
     min-height: 1px;
-    background: red;
     margin: 15px;
 }
 
@@ -410,8 +371,8 @@ h3 {
 .course-content {
     display: flex;
     flex-direction: column;
-    opacity: 0;
     transition: 0.2s;
+    opacity: 0;
 }
 
 .inner-course-title {
@@ -428,66 +389,37 @@ h3 {
 }
 
 .marquee {
-    overflow: hidden;
-    white-space: nowrap;
-
     font-size: 16px;
     opacity: 0.5;
     margin: 5px 0px 5px 0px;
-
-    animation-play-state:running; 
-}
-
-.course:hover .course-title {
-    opacity: 0;
-    transition: 0.2s;
-}
-
-.course:hover .course-content {
-    opacity: 1;
-    transition: 0.2s;
-}
-
-.course:hover .marquee-left1{
-    animation-play-state:running; 
-}
-
-.course:hover .marquee-left2{
+    overflow: hidden;
+    white-space: nowrap;
     animation-play-state: running;
 }
 
-.course:hover .marquee-right1{
-    animation-play-state: running;
-}
-
-.course:hover .marquee-right2{
-    animation-play-state: running;
-}
+.course:hover .course-title { opacity: 0; }
+.course:hover .course-content { opacity: 1; }
 
 .marquee-left1 {
     display: inline-block;
-    animation: marquee1 30s linear infinite;
-    animation-play-state: paused;
+    animation: marquee1 40s linear infinite;
 }
 
 .marquee-left2 {
     display: inline-block;
-    animation: marquee2 30s linear infinite;
-    animation-play-state: paused;
+    animation: marquee2 40s linear infinite;
 }
 
 .marquee-right1 {
     display: inline-block;
-    animation: marquee1 30s linear infinite;
+    animation: marquee1 40s linear infinite;
     animation-direction: reverse;
-    animation-play-state: paused;
 }
 
 .marquee-right2 {
     display: inline-block;
-    animation: marquee2 30s linear infinite;
+    animation: marquee2 40s linear infinite;
     animation-direction: reverse;
-    animation-play-state: paused;
 }
 
 /* https://gist.github.com/Jaskaranbir/eb0f26d0ba47f55e25fde3b63d8b7ef4 */
@@ -503,3 +435,34 @@ h3 {
 }
 
 
+/* For smaller screens */
+@media only screen and (max-width: 750px) {
+    body {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .project {
+        min-width: 80vw;
+        padding: 25px;
+        margin: 10px;
+    }
+
+    .project-title { font-size: 30px; }
+    .project-content { margin: 2px; }
+
+    #toolbox {
+        min-width: 80vw;
+        width: 50%;
+        height: 50%;
+    }
+
+    .course {
+        min-width: 80vw;
+        max-width: 400px;
+    }
+
+    .course-wrapper { margin: 10px; }
+    .course-title { opacity: 0; }
+    .course-content { opacity: 1; }
+}
