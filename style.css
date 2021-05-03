@@ -148,40 +148,13 @@ h3 {
     -webkit-text-fill-color: transparent;
 }
 
-@media only screen and (max-width: 750px) {
-    body {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .project {
-        min-width: 80vw;
-        padding: 25px;
-        margin: 10px;
-    }
-
-    .project-title {
-        font-size: 30px;
-    }
-
-    .project-content {
-        margin: 2px;
-    }
-
-    #toolbox {
-        min-width: 80vw;
-        width: 50%;
-        height: 50%;
-    }
-}
-
 .project-logo {
     width: 75%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
 #lax-logo {
@@ -350,31 +323,75 @@ h3 {
     opacity: 0;
 } */
 
+/* For smaller screens */
+@media only screen and (max-width: 750px) {
+    body {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .project {
+        min-width: 80vw;
+        padding: 25px;
+        margin: 10px;
+    }
+
+    .project-title { font-size: 30px; }
+    .project-content { margin: 2px; }
+
+    #toolbox {
+        min-width: 80vw;
+        width: 50%;
+        height: 50%;
+    }
+
+    .course {
+        min-width: 80vw;
+        max-width: 400px;
+    }
+/* 
+    .course:not(:hover) .course-content {
+        opacity: 1;
+        transition: 0.2s;
+    } */
+
+    .course-wrapper { margin: 10px; }
+    /* .course-title { display: none; } */
+}
+
 
 /* COURSES section */
 .courses {
+    background: blue;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
     margin-top: 25px;
     margin-bottom: 25px;
+    min-width: 50px;
+}
+
+.course-wrapper {
+    justify-content: center;
+    min-height: 1px;
+    background: red;
+    margin: 15px;
 }
 
 .course {
     display: flex;
     flex-direction: column;
     background: #131314;
-    width: 100%;
     padding: 25px;
-    margin: 10px;
     box-shadow: 0 0 14px #121314;
     border-radius: 30px;
     line-height: 150%;
-    max-width: 400px;
+    max-width: 250px;
     position: relative;
-    justify-content: space-between;
+    justify-content: center;
     letter-spacing: 1px;
+    overflow: hidden;
 }
 
 .course-title {
@@ -386,13 +403,14 @@ h3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: 0.4s;
+    transition: 0.2s;
     line-height: 100%;
-    opacity:0;
 }
 
 .course-content {
-    /* opacity: 0; */
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
     transition: 0.2s;
 }
 
@@ -412,20 +430,13 @@ h3 {
 .marquee {
     overflow: hidden;
     white-space: nowrap;
-    margin: 10px 0px 10px 0px;
-}
 
-/* .marquee-left {
-    display: inline-block;
-    animation: floatText 20s infinite linear;
-}
+    font-size: 16px;
+    opacity: 0.5;
+    margin: 5px 0px 5px 0px;
 
-.marquee-right {
-    display: inline-block;
-    white-space: nowrap;
-    animation: floatText 5s infinite linear;
-    animation-direction: reverse;
-} */
+    animation-play-state:running; 
+}
 
 .course:hover .course-title {
     opacity: 0;
@@ -453,88 +464,42 @@ h3 {
     animation-play-state: running;
 }
 
-/*
-.course:not(:hover) .marquee-right{
-    animation-play-state: paused;
-}
-
-
-@keyframes floatText {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-  } */
-
 .marquee-left1 {
     display: inline-block;
     animation: marquee1 30s linear infinite;
-    /* animation-play-state: paused; */
+    animation-play-state: paused;
 }
 
 .marquee-left2 {
     display: inline-block;
     animation: marquee2 30s linear infinite;
-    /* animation-play-state: paused; */
-    /* animation-delay: 5s; */
+    animation-play-state: paused;
 }
 
 .marquee-right1 {
     display: inline-block;
     animation: marquee1 30s linear infinite;
     animation-direction: reverse;
-    /* animation-play-state: paused; */
-
+    animation-play-state: paused;
 }
 
 .marquee-right2 {
     display: inline-block;
     animation: marquee2 30s linear infinite;
     animation-direction: reverse;
-    /* animation-play-state: paused; */
-    /* animation-delay: 5s; */
+    animation-play-state: paused;
 }
 
 /* https://gist.github.com/Jaskaranbir/eb0f26d0ba47f55e25fde3b63d8b7ef4 */
 
 @keyframes marquee1 {
-    /* from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    } */
-
-    from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+    from { transform: translateX(0%); }
+    to { transform: translateX(-100%); }
 }
 
 @keyframes marquee2 {
-    /* from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-200%);
-    } */
-
-    /* from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0%);
-    } */
-
-    from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-101%);
-    }
+    from { transform: translateX(0%); }
+    to { transform: translateX(-101%);}
 }
+
 
