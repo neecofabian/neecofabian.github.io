@@ -1,4 +1,4 @@
-/* Colours 
+/* Colour Constants
 Projects
 #131314;
 
@@ -35,19 +35,17 @@ header {
 
 /* Chevron animation */
 .arrow {
-  position: relative;
-  bottom: -5rem;
-  width: 3%;
-  height: 3%;
+    position: relative;
+    bottom: -5rem;
+    width: 3%;
+    height: 3%;
 
-  background-image: url("images/chevron_down.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+    background-image: url("images/chevron_down.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.bounce {
-  animation: bounce 2s infinite;
-}
+.bounce { animation: bounce 2s infinite; }
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
@@ -116,23 +114,16 @@ h3 {
     box-shadow: 0 0 14px #121314;
     border-radius: 30px;
     line-height: 150%;
-    max-width: 500px;
+    max-width: 450px;
     position: relative;
     justify-content: space-between;
 }
 
 /* Titles */
-.project-title {
-    font-size: 40px;
-}
+.project-title { font-size: 40px; }
 
-#illuminote-title-blue {
-    color: #58d0ff;
-}
-
-#illuminote-title-pink {
-    color: #fc5f94;
-}
+#illuminote-title-blue { color: #58d0ff; }
+#illuminote-title-pink { color: #fc5f94; }
 
 #con-man-title {
     background: -webkit-linear-gradient(#2eded0, #1a938a);
@@ -157,9 +148,9 @@ h3 {
     transition: 0.2s;
 }
 
-#lax-logo {
-    width: 40%;
-}
+#lax-logo { width: 40%; }
+
+.project-description { opacity: 0.75; }
 
 .project-content {
     opacity: 0;
@@ -212,24 +203,11 @@ h3 {
     filter: brightness(60%);
 }
 
-#illuminote-button1 {
-    background: linear-gradient(to right, #58d0ff, #367f9c);
-}
-#illuminote-button2 {
-    background: linear-gradient(to right, #fc5f94, #b9456c);
-}
-
-#conference-manager-button {
-    background: linear-gradient(to right, #2eded0, #1a938a);
-}
-
-#lax-button {
-    background: linear-gradient(to right, #bb38fe, #0096d9, #00ab77);
-}
-
-#senso-button {
-    background: linear-gradient(to right, rgb(212, 212, 212), rgb(156, 156, 156));
-}
+#illuminote-button1 { background: linear-gradient(to right, #58d0ff, #367f9c); }
+#illuminote-button2 { background: linear-gradient(to right, #fc5f94, #b9456c); }
+#conference-manager-button { background: linear-gradient(to right, #2eded0, #1a938a); }
+#lax-button { background: linear-gradient(to right, #bb38fe, #0096d9, #00ab77); }
+#senso-button { background: linear-gradient(to right, rgb(212, 212, 212), rgb(156, 156, 156)); }
 
 .all-projects-button {
     background: #131314;
@@ -348,7 +326,7 @@ h3 {
     box-shadow: 0 0 14px #121314;
     border-radius: 30px;
     line-height: 150%;
-    max-width: 250px;
+    max-width: 300px;
     position: relative;
     justify-content: center;
     letter-spacing: 1px;
