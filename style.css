@@ -394,7 +394,7 @@ h3 {
     margin: 5px 0px 5px 0px;
     overflow: hidden;
     white-space: nowrap;
-    animation-play-state: running;
+    /* animation-play-state: running; */
 }
 
 .course:hover .course-title { opacity: 0; }
@@ -403,24 +403,33 @@ h3 {
 .marquee-left1 {
     display: inline-block;
     animation: marquee1 40s linear infinite;
+    animation-play-state: paused;
 }
 
 .marquee-left2 {
     display: inline-block;
     animation: marquee2 40s linear infinite;
+    animation-play-state: paused;
 }
 
 .marquee-right1 {
     display: inline-block;
     animation: marquee1 40s linear infinite;
     animation-direction: reverse;
+    animation-play-state: paused;
 }
 
 .marquee-right2 {
     display: inline-block;
     animation: marquee2 40s linear infinite;
     animation-direction: reverse;
+    animation-play-state: paused;
 }
+
+.course:hover .marquee-left1 { animation-play-state:running; }
+.course:hover .marquee-left2 { animation-play-state: running; }
+.course:hover .marquee-right1 { animation-play-state: running; }
+.course:hover .marquee-right2 { animation-play-state: running; }
 
 /* https://gist.github.com/Jaskaranbir/eb0f26d0ba47f55e25fde3b63d8b7ef4 */
 
@@ -462,10 +471,17 @@ h3 {
         max-width: 300px;
         width: 80vw; */
 
-        min-width: 80vw;
+        min-width: 1px;
+        max-width: 300px;
+        width: 80vw;
     }
 
     .course-wrapper { margin: 10px; }
     .course-title { opacity: 0; }
     .course-content { opacity: 1; }
+
+    .course:not(:hover) .marquee-left1 { animation-play-state:running; }
+    .course:not(:hover) .marquee-left2 { animation-play-state:running; }
+    .course:not(:hover) .marquee-right1 { animation-play-state:running; }
+    .course:not(:hover) .marquee-right2 { animation-play-state:running; }
 }
