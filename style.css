@@ -466,7 +466,7 @@ h3 {
 }
 
 /* gradients from https://uigradients.com/ */
-#csc108 { background: -webkit-linear-gradient(to right, #A5CC82, #2980B9); background: linear-gradient(to right, #A5CC82, #2980B9); }
+/* #csc108 { background: -webkit-linear-gradient(to right, #A5CC82, #2980B9); background: linear-gradient(to right, #A5CC82, #2980B9); }
 #csc148 { background: -webkit-linear-gradient(to right, #2980B9, #9796f0); background: linear-gradient(to right, #2980B9, #9796f0); }
 #csc165 { background: -webkit-linear-gradient(to right, #9796f0, #F7BB97); background: linear-gradient(to right, #9796f0, #F7BB97); }
 #sta130 { background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89); background: linear-gradient(to right, #F7BB97, #DD5E89); }
@@ -474,4 +474,4 @@ h3 {
 #csc209 { background: -webkit-linear-gradient(to right, #12D8FA, #F9D423); background: linear-gradient(to right, #12D8FA, #F9D423); }
 #csc236 { background: -webkit-linear-gradient(to right, #F9D423, #E94057); background: linear-gradient(to right, #F9D423, #E94057); }
 #csc258 { background: -webkit-linear-gradient(to right, #E94057, #86A8E7); background: linear-gradient(to right, #E94057, #86A8E7); }
-#csc263 { background: -webkit-linear-gradient(to right, #86A8E7, #20B2AA); background: linear-gradient(to right, #86A8E7, #20B2AA); }
+#csc263 { background: -webkit-linear-gradient(to right, #86A8E7, #20B2AA); background: linear-gradient(to right, #86A8E7, #20B2AA); } */
