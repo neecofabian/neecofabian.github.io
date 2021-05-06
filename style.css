@@ -313,6 +313,7 @@ h3 {
 }
 
 .course-wrapper {
+    display: flex;
     justify-content: center;
     min-height: 1px;
     margin: 15px;
@@ -331,6 +332,7 @@ h3 {
     justify-content: center;
     letter-spacing: 1px;
     overflow: hidden;
+    justify-content: space-between;
 }
 
 .course-title {
