@@ -78,13 +78,20 @@ h3 {
     font-weight: bold;
     margin: 0;
     line-height: normal;
+    text-align: center;
+    opacity: 70%;
 }
+
+.top { height: 100vh; }
 
 .bigger {
     font-size: 25vw;
     font-weight: bold;
     text-align: center;
+    vertical-align: middle;
     color: white;
+    padding-bottom: 5%;
+    line-height: 45%;
 }
 
 
@@ -103,6 +110,16 @@ h3 {
     margin-bottom: 50px;
 }
 
+.project-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    position: relative;
+    justify-content: space-between;
+}
+
 .project {
     display: flex;
     flex-direction: column;
@@ -114,6 +131,12 @@ h3 {
     box-shadow: 0 0 14px #121314;
     /* box-shadow:  20px 20px 31px #191a1b,
     -20px -20px 31px #1f2023; */
+
+    box-shadow:  14px 14px 29px #0e0e0f,
+             -14px -14px 29px #181819;
+
+    /* box-shadow:  10px 10px 42px #111112,
+             -10px -10px 42px #151516; */
     border-radius: 30px;
     line-height: 150%;
     max-width: 500px;
@@ -122,7 +145,12 @@ h3 {
 }
 
 /* Titles */
-.project-title { font-size: 40px; }
+.project-title { 
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    line-height: normal;
+}
 
 #illuminote-title-blue { color: #58d0ff; }
 #illuminote-title-pink { color: #fc5f94; }
@@ -240,15 +268,50 @@ h3 {
 }
 
 /* Toolbox Section */
-#toolbox {
+.toolbox-section {
+    height: 60vh;
+    /* padding: 50px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: palegoldenrod; */
+}
+
+.tool {
+    font-weight: bold;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #131314;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    margin: 3px;
+    padding: 5px 10px 5px 10px;
+    font-size: 20px;
+    height: 5%;
+    opacity: 0;
+    transition: 0.2s;
+
+    /* background: linear-gradient(145deg, #141415, #111112);
+    box-shadow:  5px 5px 10px #101011,
+             -5px -5px 10px #161617; */
+}
+
+.tool-seen {
+    transition: 0.2s;
+    opacity: 1;
+    margin: 2px;
+}
+/*
+#toolbox-container {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     justify-content: center;
-    /* min-width: 70vw; */
-    /* width: 50%; */
-    width: 700px;
-    /* height: auto; */
+    width: 80vw;
+    height: auto;
     height: 50%;
     border-radius: 30px;
     perspective: 800px;
@@ -278,7 +341,7 @@ h3 {
     transition-delay: 0.6s;
 }
 
-/* https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-using-only-css */
+https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-using-only-css
 #flap {
     position: absolute;
     background: darkred;
@@ -289,21 +352,21 @@ h3 {
     border-radius: 30px;
 }
 
-#toolbox:hover #flap {
+#toolbox-container:hover #flap {
     transform: rotateX(170deg);
     transition: transform 0.5s 0.5s;
 }
 
-#toolbox:hover #handle {
+#toolbox-container:hover #handle {
     opacity: 0%;
     transition-delay: 0.6s;
-}
+} */
 
 /* .project-content:not(:hover) {
     opacity: 0;
 } */
 
-/* COURSES SECTION */
+/* LEARNER SECTION */
 .courses {
     display: flex;
     flex-wrap: wrap;
@@ -326,9 +389,9 @@ h3 {
     flex-direction: column;
     background: #131314;
     padding: 25px;
-    box-shadow: 0 0 14px #121314;
-    /* box-shadow:  20px 20px 31px #191a1b,
-    -20px -20px 31px #1f2023; */
+    /* box-shadow: 0 0 14px #121314; */
+    box-shadow:  20px 20px 31px #191a1b,
+    -20px -20px 31px #1f2023;
     border-radius: 30px;
     line-height: 150%;
     max-width: 300px;
@@ -357,6 +420,7 @@ h3 {
     line-height: 100%;
     opacity: 75%;
 }
+
 .course-icon {
     position: absolute;
     opacity: 0.7;
@@ -458,11 +522,11 @@ h3 {
     .project-title { font-size: 30px; }
     .project-content { margin: 2px; }
 
-    #toolbox {
+    /* #toolbox-container {
         min-width: 80vw;
         width: 50%;
         height: 50%;
-    }
+    } */
 
     .course {
         /* min-width: 200px;

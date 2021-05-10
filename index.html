@@ -12,12 +12,13 @@
     <!-- <script src="https://cdn.rawgit.com/wnda/pivot/master/pivot.js"></script>
     <script>pivot.init({selector: ".projects", perspective: 500});</script> -->
     <script src="pivot.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <!--Home-->
     <header class="top">
-        
-        <h1>Hello, I'm<br><span class="bigger">neeco</span></h1>
+        <h1>Hello, I'm</h1><div class="bigger">neeco</div>
         <div class="arrow bounce"></div>
 
         <!--Menu-->
@@ -36,8 +37,7 @@
     
     <!--Programmer-->
     <section class="programmer" id="programmer">
-        <!-- <h2 data-aos="fade-up">I'm a programmer.</h2> -->
-        <h2>I'm a programmer.</h2>
+        <div class="section-title"><h2>I'm a programmer.</h2></div>
         
         <!--Projects-->
         <h3>Here are some of my projects.</h3>
@@ -45,7 +45,7 @@
         <div class="projects">
             <div class="project">
                 <div class="project-content" id="illuminote-content">
-                    <h3><span class="project-title" id="illuminote-title-blue">Illumi</span><span class="project-title" id="illuminote-title-pink">note</span></h3>
+                    <span class="project-title" id="illuminote-title-blue">Illumi</span><span class="project-title" id="illuminote-title-pink">note</span>
                     <p>A Mixed Reality multiplayer game in the dark.</p>
                     <ul class="project-description">
                         <li>Place sticky notes on TV, projector screen, or monitor.</li>
@@ -67,7 +67,7 @@
 
             <div class="project" id="conference-manager">
                 <div class="project-content" id="conference-manager-content">
-                    <h3><span class="project-title" id="con-man-title">Conference Manager</span></h3>
+                    <span class="project-title" id="con-man-title">Conference Manager</span>
                     <p>A hub for managing large conferences.</p>
                     <ul class="project-description">
                         <li>Join as an organizer, attendee, or speaker.</li>
@@ -88,7 +88,7 @@
 
             <div class="project" id="lax">
                 <div class="project-content" id="lax-content">
-                    <h3><span class="project-title" id="lax-title">Lax</span></h3>
+                    <span class="project-title" id="lax-title">Lax</span>
                     <p>A relaxation and productivity centre.</p>
                     <ul class="project-description">
                         <li><b>Breathe</b> - follow visual breathing exercises.</li>
@@ -106,7 +106,7 @@
 
             <div class="project" id="senso">
                 <div class="project-content" id="senso-content">
-                    <span class="project-title"><h3>Senso</h3></span>
+                    <span class="project-title">Senso</span>
                     <p>An app to fidget and focus.</p>
                     <ul class="project-description">
                         <li>Tilt the phone to steer the ball.</li>
@@ -129,29 +129,41 @@
         </div>
         
         <!--Tool Box-->
-        <h3>Look inside my Tool Box.</h3>
+        <div class="toolbox-section">
+            <h3>My tools.</h3>
 
-        <div class="wrapper">
-            <div id="toolbox">
-                <div id="flap"><div id="handle"></div></div>
-                <ul id="stack">
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>C</li>
-                    <li>R</li>
-                    <li>HTML, CSS, JavaScript</li>
-                    <li>Unix</li>
-                    <li>Git</li>
-                </ul>
-            </div>
+            <!-- <div class="wrapper">
+                <div id="toolbox-container">
+                    <div id="flap"><div id="handle"></div></div>
+                    <ul id="stack">
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>R</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Unix</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+            </div> -->
+
+            <div class="tool" id="tool1">C</div>
+            <div class="tool" id="tool2">R</div>
+            <div class="tool" id="tool3">Git</div>
+            <div class="tool" id="tool4">CSS</div>
+            <div class="tool" id="tool5">HTML</div>
+            <div class="tool" id="tool6">Unix</div>
+            <div class="tool" id="tool7">Java</div>
+            <div class="tool" id="tool8">Python</div>
+            <div class="tool" id="tool9">Assembly Language</div>
         </div>
         
     </section>
 
-    <!--Programmer-->
-    <section class="programmer" id="programmer">
-        <h2>I'm a learner.</h2>
-        <h3>Third year student at the University of Toronto.</h3>
+    <!--Learner-->
+    <section class="learner" id="learner">
+        <div class="section-title"><h2>I'm a learner.</h2></div>
+        <h3>3<sup>rd</sup> year Computer Science Specialist at the University of Toronto.</h3>
 
         <div class="courses">
 
@@ -484,7 +496,7 @@
                 </div>
             </div> -->
     </section>
-    <br>V10
+    <br>V11
 
     <!-- Animations -->
     <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
