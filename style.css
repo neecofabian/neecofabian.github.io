@@ -70,7 +70,8 @@ h1 {
 
 h2 {
     font-size: 50px;
-    margin-top:0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h3 {
@@ -79,6 +80,7 @@ h3 {
     margin: 0;
     line-height: normal;
     text-align: center;
+    margin-top: 20px;
     opacity: 70%;
 }
 
@@ -94,11 +96,22 @@ h3 {
     line-height: 45%;
 }
 
+.section-title {
+    display: inline-block;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 0px;
+    border-radius: 15px;
+    text-shadow: 1px 1px 10px #131314;
+}
 
 /* PROGRAMMER SECTION */
 .programmer {
     display: center;
-    margin-bottom: 100px;
+    /* padding-bottom: 100px; */
 }
 
 .projects {
@@ -270,15 +283,45 @@ h3 {
 /* Toolbox Section */
 .toolbox-section {
     height: 60vh;
-    /* padding: 50px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     /* background: palegoldenrod; */
+    /* background: palegreen; */
+}
+
+.tools {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+    margin: 5px;
+    margin-top: 20px;
+    height: 20rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.tool:nth-child(1){
+    grid-column: span 2;
+}
+.tool:nth-child(2){
+    grid-column: span 2;
+}
+
+.tool:nth-child(5){
+    grid-column: span 3;
+}
+
+.tool:nth-child(7){
+    grid-column: span 5;
+}
+
+.tool:nth-child(10){
+    grid-column: span 3;
 }
 
 .tool {
-    font-weight: bold;
+    /* font-weight: bold;
     letter-spacing: 3px;
     display: flex;
     justify-content: center;
@@ -292,11 +335,27 @@ h3 {
     font-size: 20px;
     height: 5%;
     opacity: 0;
-    transition: 0.2s;
+    transition: 0.2s; */
 
     /* background: linear-gradient(145deg, #141415, #111112);
     box-shadow:  5px 5px 10px #101011,
              -5px -5px 10px #161617; */
+
+    background: #131314;
+    /* box-shadow:  9px 9px 29px #121213,
+             -9px -9px 29px #141415; */
+
+    font-size: 25px;
+    font-weight: bold;
+    /* background: palevioletred; */
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    /* opacity: 0; */
+    transition: 0.2s;
 }
 
 .tool-seen {
@@ -304,29 +363,31 @@ h3 {
     opacity: 1;
     margin: 2px;
 }
-/*
+
 #toolbox-container {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     justify-content: center;
     width: 80vw;
+    max-width: 1000px;
     height: auto;
-    height: 50%;
+    /* height: 50%; */
     border-radius: 30px;
     perspective: 800px;
     transform-style: preserve-3d;
-    background:rgb(102, 1, 1);
+    /* background:rgb(102, 1, 1); */
+    background: black;
     margin: 20px;
     margin-top: 60px;
     text-align: center;
 }
 
-#stack {
+/* #tools {
     list-style-type: none;
     padding: 50px;
     border-radius: 30px;
-}
+} */
 
 #handle {
     position: absolute;
@@ -335,16 +396,18 @@ h3 {
     transform: translate(-50%, -50%);
     width: 35%;
     height: 35px;
-    background: linear-gradient(to right, rgb(40, 40, 40), rgb(10, 10, 10), rgb(40, 40, 40));
-    box-shadow: 0 0 30px rgb(87, 1, 1);
+    /* background: linear-gradient(to right, rgb(40, 40, 40), rgb(10, 10, 10), rgb(40, 40, 40)); */
+    background:rgb(102, 1, 1);
+    /* box-shadow: 0 0 30px rgb(87, 1, 1); */
     border-radius: 20px;
     transition-delay: 0.6s;
 }
 
-https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-using-only-css
+/* https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-using-only-css */
 #flap {
     position: absolute;
-    background: darkred;
+    /* background: darkred; */
+    background: #131314;
     width: 100%;
     height: 100%;
     transform-origin: 0 0;
@@ -360,13 +423,17 @@ https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-usi
 #toolbox-container:hover #handle {
     opacity: 0%;
     transition-delay: 0.6s;
-} */
+}
 
 /* .project-content:not(:hover) {
     opacity: 0;
 } */
 
 /* LEARNER SECTION */
+.learner {
+    margin: 0px;
+}
+
 .courses {
     display: flex;
     flex-wrap: wrap;
