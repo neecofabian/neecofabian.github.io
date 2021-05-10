@@ -96,10 +96,8 @@ h3 {
     line-height: 45%;
 }
 
-section { display: block; }
-
 .section-title {
-    display: inline-block;
+    display: block;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
