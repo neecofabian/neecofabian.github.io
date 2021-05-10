@@ -99,9 +99,10 @@ h3 {
 .section-title {
     display: inline-block;
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     z-index: 5;
-    padding: 10px;
+    padding: 5px;
     backdrop-filter: blur(10px);
     margin-bottom: 0px;
     border-radius: 15px;
@@ -579,6 +580,8 @@ h3 {
         padding-left: 5%;
         padding-right: 5%;
     }
+
+    h2 { font-size: 40px; }
 
     .project {
         min-width: 80vw;
