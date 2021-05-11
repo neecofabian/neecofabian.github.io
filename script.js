@@ -8,7 +8,7 @@ if (!(window.matchMedia("only screen and (max-width: 750px)").matches)) {
 }
 
 // UNCOMMENT LATER
-// gsap.registerPlugin("ScrollTrigger");
+gsap.registerPlugin("ScrollTrigger");
 // gsap.to(".toolbox-section", {
 //     scrollTrigger: {
 //         trigger: ".toolbox-section",
@@ -59,3 +59,33 @@ if (!(window.matchMedia("only screen and (max-width: 750px)").matches)) {
 //         // markers: true
 //     }
 //   })
+
+var timeline = gsap.timeline();
+
+timeline.to("#flap",
+{
+    rotationX: 180,
+})
+
+ScrollTrigger.create({
+    trigger: ".tools",
+    animation: timeline,
+    start: "top center+=10%",
+    end: "top center-=10%",
+    scrub: true,
+    markers: true,
+})
+
+// gsap.to("#flap", {
+//         rotateX: 170,
+//         scrollTrigger: {
+//             trigger: ".toolbox-section",
+//             start: "top center", 
+//             // end: () => `+=${document.querySelector(".programmer").offsetHeight}`,
+//             scrub: true,
+//             // pin: true,
+//             // toggleClass: ".flap-move",
+//             // pinSpacing: false,
+//             // markers: true
+//         }
+//       })

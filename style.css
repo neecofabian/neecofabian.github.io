@@ -99,7 +99,7 @@ h3 {
 .section-title {
     display: inline-block;
     position: sticky;
-    -webkit-position: sticky;
+    position: -webkit-sticky;
     top: 0px;
     z-index: 10;
     padding: 5px;
@@ -278,10 +278,11 @@ h3 {
 
 /* Toolbox Section */
 .toolbox-section {
-    height: 60vh;
+    /* height: 60vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 100px 0px 100px 0px;
     /* background: palegoldenrod; */
     /* background: palegreen; */
 }
@@ -294,7 +295,7 @@ h3 {
     margin-top: 20px;
     height: 20rem;
     width: 100%;
-    max-width: 1000px;
+    max-width: 800px;
 }
 
 .tool:nth-child(1){
@@ -341,7 +342,7 @@ h3 {
     /* box-shadow:  9px 9px 29px #121213,
              -9px -9px 29px #141415; */
 
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     /* background: palevioletred; */
     text-align: center;
@@ -393,7 +394,7 @@ h3 {
     width: 35%;
     height: 35px;
     /* background: linear-gradient(to right, rgb(40, 40, 40), rgb(10, 10, 10), rgb(40, 40, 40)); */
-    background:rgb(102, 1, 1);
+    /* background:rgb(102, 1, 1); */
     /* box-shadow: 0 0 30px rgb(87, 1, 1); */
     border-radius: 20px;
     transition-delay: 0.6s;
@@ -402,24 +403,30 @@ h3 {
 /* https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-using-only-css */
 #flap {
     position: absolute;
-    /* background: darkred; */
     background: #131314;
     width: 100%;
     height: 100%;
     transform-origin: 0 0;
-    transition: transform 0.5s 0.5s;
+    /* transition: transform 0.5s 0.5s; */
+    transition: transform;
     border-radius: 30px;
 }
 
-#toolbox-container:hover #flap {
+/* .flap-move {
     transform: rotateX(170deg);
     transition: transform 0.5s 0.5s;
-}
+} */
 
-#toolbox-container:hover #handle {
+
+/* #toolbox-container:hover #flap {
+    transform: rotateX(170deg);
+    transition: transform 0.5s 0.5s;
+} */
+
+/* #toolbox-container:hover #handle {
     opacity: 0%;
     transition-delay: 0.6s;
-}
+} */
 
 /* .project-content:not(:hover) {
     opacity: 0;
