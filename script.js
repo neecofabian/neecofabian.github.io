@@ -64,7 +64,7 @@ var timeline = gsap.timeline();
 
 timeline.to("#flap",
 {
-    rotationX: 180,
+    rotationX: 180
 })
 
 ScrollTrigger.create({
@@ -73,7 +73,8 @@ ScrollTrigger.create({
     start: "top center+=10%",
     end: "top center-=10%",
     scrub: true,
-    markers: true,
+    // toggleClass: {targets: "#flap-text", className: ".is-active"}
+    // markers: true
 })
 
 // gsap.to("#flap", {

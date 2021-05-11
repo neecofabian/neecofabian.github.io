@@ -378,6 +378,7 @@ h3 {
     margin: 20px;
     margin-top: 60px;
     text-align: center;
+    perspective: 1750px;
 }
 
 /* #tools {
@@ -386,24 +387,28 @@ h3 {
     border-radius: 30px;
 } */
 
-#handle {
+/* #handle {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 35%;
     height: 35px;
-    /* background: linear-gradient(to right, rgb(40, 40, 40), rgb(10, 10, 10), rgb(40, 40, 40)); */
-    /* background:rgb(102, 1, 1); */
-    /* box-shadow: 0 0 30px rgb(87, 1, 1); */
+    background: linear-gradient(to right, rgb(40, 40, 40), rgb(10, 10, 10), rgb(40, 40, 40));
+    background:rgb(102, 1, 1);
+    box-shadow: 0 0 30px rgb(87, 1, 1);
     border-radius: 20px;
     transition-delay: 0.6s;
-}
+} */
 
 /* https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-using-only-css */
 #flap {
     position: absolute;
     background: #131314;
+    
+    /* background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%); */
+
     width: 100%;
     height: 100%;
     transform-origin: 0 0;
@@ -411,6 +416,12 @@ h3 {
     transition: transform;
     border-radius: 30px;
 }
+
+#flap-text {
+    opacity: 0;
+}
+
+#flap-text
 
 /* .flap-move {
     transform: rotateX(170deg);
