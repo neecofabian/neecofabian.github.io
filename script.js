@@ -32,20 +32,20 @@ gsap.registerPlugin("ScrollTrigger");
 // })
 
 // UNCOMMENT LATER
-// const tools = gsap.utils.toArray('.tool');
-// tools.reverse().forEach(tool => {
-//   gsap.to(tool, { // this will animate ALL boxes
-//     // y: '300%',
-//     scrollTrigger: {
-//         trigger: tool,
-//         start: "top center",
-//         end: "+=100%",
-//         scrub: true,
-//         toggleClass: {targets: tool, className: "tool-seen"},
-//         // markers: true
-//     }
-//   })
-// });
+const tools = gsap.utils.toArray('.tool');
+tools.reverse().forEach(tool => {
+  gsap.to(tool, { // this will animate ALL boxes
+    // y: '300%',
+    scrollTrigger: {
+        trigger: tool,
+        start: "top center+=5%",
+        // end: "+=150%",
+        scrub: true,
+        toggleClass: {targets: tool, className: "tool-seen"},
+        // markers: true
+    }
+  })
+});
 
 // gsap.to(".section-title", {
 //     scrollTrigger: {
@@ -62,22 +62,22 @@ gsap.registerPlugin("ScrollTrigger");
 
 var timeline = gsap.timeline();
 
-timeline.to("#flap",
+timeline.to(".flap",
 {
-    rotationX: 180
+    rotationX: 180,
 })
 
 ScrollTrigger.create({
     trigger: ".tools",
     animation: timeline,
-    start: "top center+=10%",
-    end: "top center-=10%",
+    start: "top center+=15%",
+    end: "top center-=15%",
     scrub: true,
-    // toggleClass: {targets: "#flap-text", className: ".is-active"}
+    // toggleClass: {targets: ".flap-text", className: ".is-active"}
     // markers: true
 })
 
-// gsap.to("#flap", {
+// gsap.to(".flap", {
 //         rotateX: 170,
 //         scrollTrigger: {
 //             trigger: ".toolbox-section",

@@ -1,6 +1,6 @@
 /* Colour Constants
 Projects
-#131314;
+#131313;
 
 Lax blue, purple, green
 #0096d9
@@ -106,7 +106,7 @@ h3 {
     backdrop-filter: blur(10px);
     margin-bottom: 0px;
     border-radius: 15px;
-    text-shadow: 1px 1px 10px #131314;
+    text-shadow: 1px 1px 10px #131313;
 }
 
 /* PROGRAMMER SECTION */
@@ -137,7 +137,7 @@ h3 {
 .project {
     display: flex;
     flex-direction: column;
-    background: #131314;
+    background: #131313;
     color: white;
     width: 100%;
     padding: 50px;
@@ -249,7 +249,7 @@ h3 {
 #senso-button { background: linear-gradient(to right, rgb(212, 212, 212), rgb(156, 156, 156)); }
 
 .all-projects-button {
-    background: #131314;
+    background: #131313;
     color: white;
 
     text-align: center;
@@ -267,14 +267,14 @@ h3 {
 
 .all-projects-button:hover {
     background: white;
-    color: #131314;
+    color: #131313;
 }
 
-.wrapper {
+/* .wrapper {
     display: flex;
     width: 100%;
     justify-content: center;
-}
+} */
 
 /* Toolbox Section */
 .toolbox-section {
@@ -282,86 +282,12 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 0px 100px 0px;
+    padding: 200px 0px 220px 0px;
     /* background: palegoldenrod; */
     /* background: palegreen; */
 }
 
-.tools {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 1rem;
-    margin: 5px;
-    margin-top: 20px;
-    height: 20rem;
-    width: 100%;
-    max-width: 800px;
-}
-
-.tool:nth-child(1){
-    grid-column: span 2;
-}
-.tool:nth-child(2){
-    grid-column: span 2;
-}
-
-.tool:nth-child(5){
-    grid-column: span 3;
-}
-
-.tool:nth-child(7){
-    grid-column: span 5;
-}
-
-.tool:nth-child(10){
-    grid-column: span 3;
-}
-
-.tool {
-    /* font-weight: bold;
-    letter-spacing: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #131314;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 10px;
-    margin: 3px;
-    padding: 5px 10px 5px 10px;
-    font-size: 20px;
-    height: 5%;
-    opacity: 0;
-    transition: 0.2s; */
-
-    /* background: linear-gradient(145deg, #141415, #111112);
-    box-shadow:  5px 5px 10px #101011,
-             -5px -5px 10px #161617; */
-
-    background: #131314;
-    /* box-shadow:  9px 9px 29px #121213,
-             -9px -9px 29px #141415; */
-
-    font-size: 20px;
-    font-weight: bold;
-    /* background: palevioletred; */
-    text-align: center;
-    vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    /* opacity: 0; */
-    transition: 0.2s;
-}
-
-.tool-seen {
-    transition: 0.2s;
-    opacity: 1;
-    margin: 2px;
-}
-
-#toolbox-container {
+.toolbox-container {
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -371,12 +297,11 @@ h3 {
     height: auto;
     /* height: 50%; */
     border-radius: 30px;
-    perspective: 800px;
     transform-style: preserve-3d;
     /* background:rgb(102, 1, 1); */
-    background: black;
-    margin: 20px;
-    margin-top: 60px;
+    background: #0c0c0e;
+    /* margin: 20px; */
+    margin-top: 50px;
     text-align: center;
     perspective: 1750px;
 }
@@ -402,9 +327,9 @@ h3 {
 } */
 
 /* https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-using-only-css */
-#flap {
+.flap {
     position: absolute;
-    background: #131314;
+    background: #131313;
     
     /* background-color: #2d3436;
     background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%); */
@@ -415,13 +340,175 @@ h3 {
     /* transition: transform 0.5s 0.5s; */
     transition: transform;
     border-radius: 30px;
+    z-index: 5;
 }
 
-#flap-text {
+/* .flap:after {
+    background-color: #a37131;
+    background-image: -webkit-linear-gradient(hsla(0,0%,100%,.25), hsla(0,0%,0%,.25));
+    bottom: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    -webkit-transform: rotateX(-90deg);
+    -webkit-transform-origin: 100% 50%;
+} */
+
+.tools {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+    margin: 20px;
+    margin-bottom: 24px;
+    /* margin-top: 20px; */
+    height: 20rem;
+    width: 100%;
+    /* max-width: 1000px; */
+    /* background-color: paleturquoise; */
+}
+
+.tool:nth-child(1){ grid-column: span 2; }
+.tool:nth-child(2){ grid-column: span 2; }
+.tool:nth-child(5){ grid-column: span 3; }
+.tool:nth-child(7){ grid-column: span 5; }
+.tool:nth-child(8){ grid-column: span 2; }
+.tool:nth-child(10){ grid-column: span 2; }
+
+.tool {
+    /* font-weight: bold;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #131313;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    margin: 3px;
+    padding: 5px 10px 5px 10px;
+    font-size: 20px;
+    height: 5%;
     opacity: 0;
+    transition: 0.2s; */
+
+    /* background: linear-gradient(145deg, #141415, #111112);
+    box-shadow:  5px 5px 10px #101011,
+             -5px -5px 10px #161617; */
+
+    /* background: #262626; */
+    /* background: #131313; */
+    background: #222222;
+    
+    /* box-shadow:  9px 9px 29px #121213,
+             -9px -9px 29px #141415; */
+
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    text-indent: 0.3rem;
+    /* background: palevioletred; */
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    /* opacity: 0; */
+    transition: 0.2s;
+    box-shadow: 2px 4px #161616;
+    opacity: 0;
+    transition: 0.3s;
 }
 
-#flap-text
+.tool-seen { 
+    opacity: 1;
+    animation: slide-up 0.3s;
+    transition: 0.3s;
+}
+
+@keyframes slide-up {
+    0% { transform: translateY(60%); }
+    100% { transform: translateY(0); }
+}
+
+
+#tool-java { 
+    background: linear-gradient(to right, #f4821a 25%, #4e7896 75%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#tool-python { 
+    background: linear-gradient(to right, #fed042 20%, #3470a3 70%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#tool-git { 
+    background: linear-gradient(to right, #f0563b 0%, #b43b25 100%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#tool-c { 
+    background: linear-gradient(to right, #6c7bd3 0%, #3541a0 100%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#tool-unix { 
+    background: linear-gradient(to right, #169e5a 0%, #0c5d35 100%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#tool-r { 
+    background: linear-gradient(to right, #256fca 0%, #1c5499 80%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#tool-asm { 
+    background: linear-gradient(to right, #6a94d8 0%, #496695e3 100%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#tool-html { 
+    background: linear-gradient(to right, #f16528 0%, #ca4220b2 100%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#tool-css { 
+    background: linear-gradient(to right, #2fa9de 0%, #0c72b8 100%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#tool-js { 
+    background: linear-gradient(to right, #f6d344 0%, #c2a627ca 80%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* .tool-seen {
+    transition: 0.2s;
+    opacity: 1;
+    margin: 2px;
+} */
 
 /* .flap-move {
     transform: rotateX(170deg);
@@ -468,7 +555,7 @@ h3 {
 .course {
     display: flex;
     flex-direction: column;
-    background: #131314;
+    background: #131313;
     padding: 25px;
     box-shadow: 0 0 14px #121314;
     /* box-shadow:  20px 20px 31px #191a1b,
@@ -604,6 +691,11 @@ h3 {
 
     .project-title { font-size: 30px; }
     .project-content { margin: 2px; }
+    .tool { 
+        font-size: 16px; 
+        letter-spacing: 0.1rem;
+        text-indent: 0.1rem;
+    }
 
     /* #toolbox-container {
         min-width: 80vw;
