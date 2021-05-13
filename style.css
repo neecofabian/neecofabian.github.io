@@ -718,14 +718,14 @@ h3 {
     }
 
     .course-wrapper { margin: 10px; }
-    .course-title { opacity: 0; }
+    /* .course-title { opacity: 0; }
     .course-icon { opacity: 0; }
-    .course-content { opacity: 1; }
+    .course-content { opacity: 1; } */
 
-    .course:not(:hover) .marquee-left1 { animation-play-state:running; }
+    /* .course:not(:hover) .marquee-left1 { animation-play-state:running; }
     .course:not(:hover) .marquee-left2 { animation-play-state:running; }
     .course:not(:hover) .marquee-right1 { animation-play-state:running; }
-    .course:not(:hover) .marquee-right2 { animation-play-state:running; }
+    .course:not(:hover) .marquee-right2 { animation-play-state:running; } */
 }
 
 /* gradients from https://uigradients.com/ */
