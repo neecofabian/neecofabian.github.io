@@ -359,11 +359,12 @@ h3 {
 .tools {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
     grid-gap: 1rem;
     margin: 20px;
     margin-bottom: 24px;
     /* margin-top: 20px; */
-    height: 20rem;
+    /* height: 20rem; */
     width: 100%;
     /* max-width: 1000px; */
     /* background-color: paleturquoise; */
@@ -416,16 +417,15 @@ h3 {
     align-items: center;
     border-radius: 25px;
     /* opacity: 0; */
-    transition: 0.2s;
     box-shadow: 2px 4px #161616;
     opacity: 0;
     transition: 0.3s;
+    padding: 15px;
 }
 
 .tool-seen { 
     opacity: 1;
     animation: slide-up 0.3s;
-    transition: 0.3s;
 }
 
 @keyframes slide-up {
@@ -691,8 +691,13 @@ h3 {
 
     .project-title { font-size: 30px; }
     .project-content { margin: 2px; }
+    
+    .toolbox-container {
+        width: 90vw;
+    }
+    
     .tool { 
-        font-size: 16px; 
+        font-size: 14px; 
         letter-spacing: 0.1rem;
         text-indent: 0.1rem;
     }
