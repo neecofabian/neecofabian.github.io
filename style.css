@@ -692,10 +692,7 @@ h3 {
     .project-title { font-size: 30px; }
     .project-content { margin: 2px; }
     
-    .toolbox-container {
-        width: 90vw;
-    }
-    
+    .toolbox-container { width: 90vw; }
     .tool { 
         font-size: 14px; 
         letter-spacing: 0.1rem;
@@ -718,17 +715,19 @@ h3 {
     }
 
     .course-wrapper { margin: 10px; }
-    /* .course-title { opacity: 0; }
-    .course-icon { opacity: 0; }
-    .course-content { opacity: 1; } */
 
-    /* .course:not(:hover) .marquee-left1 { animation-play-state:running; }
+    /* To turn marquee ON by default on mobile
+    .course-title { opacity: 0; }
+    .course-icon { opacity: 0; }
+    .course-content { opacity: 1; } 
+    
+    .course:not(:hover) .marquee-left1 { animation-play-state:running; }
     .course:not(:hover) .marquee-left2 { animation-play-state:running; }
     .course:not(:hover) .marquee-right1 { animation-play-state:running; }
     .course:not(:hover) .marquee-right2 { animation-play-state:running; } */
 }
 
-/* gradients from https://uigradients.com/ */
+/* Some gradients are from https://uigradients.com/ */
 #csc108 { background: -webkit-linear-gradient(to right, #A5CC82, #2980B9); background: linear-gradient(to right, #A5CC82, #2980B9); }
 #csc148 { background: -webkit-linear-gradient(to right, #2980B9, #9796f0); background: linear-gradient(to right, #2980B9, #9796f0); }
 #csc165 { background: -webkit-linear-gradient(to right, #9796f0, #F7BB97); background: linear-gradient(to right, #9796f0, #F7BB97); }
