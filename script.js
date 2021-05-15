@@ -73,7 +73,7 @@ ScrollTrigger.create({
     start: "top center+=15%",
     end: "top center-=15%",
     scrub: true,
-    // toggleClass: {targets: ".flap-text", className: ".is-active"}
+    // toggleClass: {targets: ".flap-text", className: "flap-text-seen"}
     // markers: true
 })
 
