@@ -141,10 +141,10 @@ h3 {
     width: 100%;
     padding: 50px;
     margin: 20px;
-    box-shadow: 0 0 14px #121314;
+    /* box-shadow: 0 0 14px #121314; */
 
-    /* box-shadow:  14px 14px 29px #0e0e0f,
-             -14px -14px 29px #181819; */
+    box-shadow:  14px 14px 29px #0e0e0f,
+             -14px -14px 29px #181819;
     border-radius: 30px;
     line-height: 150%;
     max-width: 500px;
@@ -262,6 +262,9 @@ h3 {
     padding: 20px 30px 20px 30px;
     margin: 20px;
     transition: 0.2s;
+
+    box-shadow:  7px 7px 15px #0e0e0f,
+             -7px -7px 15px #181819;
 }
 
 .all-projects-button:hover {
@@ -303,6 +306,9 @@ h3 {
     margin-top: 50px;
     text-align: center;
     perspective: 1750px;
+
+    box-shadow:  0px 28px 29px #101011,
+             -14px -14px 29px #181819;
 }
 
 /* #tools {
@@ -594,9 +600,9 @@ h3 {
     flex-direction: column;
     background: #131313;
     padding: 25px;
-    box-shadow: 0 0 14px #121314;
-    /* box-shadow:  20px 20px 31px #191a1b,
-    -20px -20px 31px #1f2023; */
+    /* box-shadow: 0 0 14px #121314; */
+    box-shadow:  20px 20px 31px #191a1b,
+    -20px -20px 31px #1f2023;
     border-radius: 30px;
     line-height: 150%;
     max-width: 300px;
@@ -724,6 +730,8 @@ h3 {
         min-width: 80vw;
         padding: 25px;
         margin: 10px;
+        box-shadow:  7px 7px 14px #0e0e0f,
+             -7px -7px 14px #181819;
     }
 
     .project-title { font-size: 30px; }
