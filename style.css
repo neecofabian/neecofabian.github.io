@@ -600,9 +600,9 @@ h3 {
     flex-direction: column;
     background: #131313;
     padding: 25px;
-    /* box-shadow: 0 0 14px #121314; */
-    box-shadow:  20px 20px 31px #191a1b,
-    -20px -20px 31px #1f2023;
+    box-shadow: 0 0 14px #121314;
+    /* box-shadow:  20px 20px 31px #191a1b,
+    -20px -20px 31px #1f2023; */
     border-radius: 30px;
     line-height: 150%;
     max-width: 300px;
