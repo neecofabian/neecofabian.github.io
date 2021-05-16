@@ -397,9 +397,8 @@ h3 {
 
 .tool:nth-child(1){ grid-column: span 2; }
 .tool:nth-child(2){ grid-column: span 2; }
-/* .tool:nth-child(5){ grid-column: span 3; }
-.tool:nth-child(7){ grid-column: span 5; } */
-.tool:nth-child(5){ grid-column: span 2; }
+.tool:nth-child(5){ grid-column: span 3; }
+.tool:nth-child(7){ grid-column: span 5; }
 .tool:nth-child(8){ grid-column: span 2; }
 .tool:nth-child(10){ grid-column: span 2; }
 
@@ -446,7 +445,7 @@ h3 {
     box-shadow: 2px 4px #161616;
     opacity: 0;
     transition: 0.3s;
-    padding: 20px;
+    padding: 15px;
     
 }
 
