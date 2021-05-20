@@ -97,11 +97,12 @@ h3 {
 
 .section-title {
     display: inline-block;
-    position: sticky;
     position: -webkit-sticky;
+    position: sticky;
     top: 0px;
     z-index: 10;
     padding: 5px;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     margin-bottom: 0px;
     border-radius: 15px;
@@ -245,7 +246,7 @@ h3 {
 #illuminote-button2 { background: linear-gradient(to right, #fc5f94, #b9456c); }
 #conference-manager-button { background: linear-gradient(to right, #2eded0, #1a938a); }
 #lax-button { background: linear-gradient(to right, #bb38fe, #0096d9, #00ab77); }
-#senso-button { background: linear-gradient(to right, rgb(212, 212, 212), rgb(156, 156, 156)); }
+.senso-button { background: linear-gradient(to right, rgb(212, 212, 212), rgb(156, 156, 156)); }
 
 .all-projects-button {
     background: #131313;
