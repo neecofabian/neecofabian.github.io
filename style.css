@@ -114,6 +114,7 @@ h3 {
 /* PROGRAMMER SECTION */
 .programmer {
     display: center;
+    height: 100%;
     /* padding-bottom: 100px; */
 }
 
@@ -578,6 +579,7 @@ h3 {
 /* LEARNER SECTION */
 .learner {
     margin: 0px;
+    height: 100%;
 }
 
 .courses {
