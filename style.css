@@ -177,6 +177,7 @@ h3 {
 #illuminote-title-pink { color: #fc5f94; }
 
 #con-man-title {
+    display: inline-block;
     background: -webkit-linear-gradient(#2eded0, #1a938a);
     -webkit-background-clip: text;
     background-clip: text;
@@ -184,10 +185,12 @@ h3 {
 }
 
 #lax-title {
+    display: inline-block;
     background: -webkit-linear-gradient(left, #ac33e9, #0096d9, #00ab77);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: contain;
 }
 
 .project-logo {
@@ -446,6 +449,7 @@ h3 {
 
     /* background: #262626; */
     /* background: #131313; */
+    display: inline-block;
     background: #222222;
     
     /* box-shadow:  9px 9px 29px #121213,
