@@ -44,10 +44,11 @@ gsap.to(".arrow", {
         start: "top center+=10%",
         end: "top center-=10%",
         scrub: true,
-        marker: true
+        
     }
   })
 
 // end: () => `+=${document.querySelector(".programmer").offsetHeight}`,
 // toggleClass: ".tool-seen",
 // pinSpacing: false,
+// markers: true,
