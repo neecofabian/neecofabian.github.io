@@ -1,6 +1,6 @@
 /* Colour Constants
 Projects
-#131313;
+#131313
 
 Lax blue, purple, green
 #0096d9
@@ -111,16 +111,12 @@ h3 {
     padding: 10px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    /* margin-bottom: 0px; */
     border-radius: 15px;
     text-shadow: 1px 1px 10px #131313;
 }
 
 /* PROGRAMMER SECTION */
-.programmer {
-    display: center;
-    /* padding-bottom: 100px; */
-}
+.programmer { display: center; }
 
 .projects {
     display: flex;
@@ -131,16 +127,6 @@ h3 {
     margin-bottom: 50px;
 }
 
-/* .project-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    max-width: 500px;
-    position: relative;
-    justify-content: space-between;
-} */
-
 .project {
     display: flex;
     flex-direction: column;
@@ -149,14 +135,10 @@ h3 {
     width: 100%;
     padding: 50px;
     margin: 20px;
-    /* box-shadow: 0 0 14px #121314; */
-
     /* box-shadow:  14px 14px 29px #0e0e0f,
              -14px -14px 29px #181819; */
-
     box-shadow:  10px 10px 20px #18181a,
              -10px -10px 20px #18181a;
-             
     border-radius: 30px;
     line-height: 150%;
     max-width: 500px;
@@ -165,7 +147,7 @@ h3 {
     transition: 0.3s ease;
 }
 
-/* Titles */
+/* Project Titles */
 .project-title { 
     font-size: 40px;
     font-weight: bold;
@@ -175,23 +157,11 @@ h3 {
 
 #illuminote-title-blue { color: #58d0ff; }
 #illuminote-title-pink { color: #fc5f94; }
-
-#con-man-title {
-    display: inline-block;
-    background: -webkit-linear-gradient(#2eded0, #1a938a);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-#lax-title {
-    display: inline-block;
-    background: -webkit-linear-gradient(left, #ac33e9, #0096d9, #00ab77);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: contain;
-}
+#con-man-title-light { color: #2eded0; }
+#con-man-title-dark { color: #1a938a; }
+#lax-title-p { color: #a630e0; }
+#lax-title-b { color: #0096d9; }
+#lax-title-g { color: #00ab77; }
 
 .project-logo {
     width: 75%;
@@ -271,22 +241,16 @@ h3 {
 .all-projects-button {
     background: #131313;
     color: white;
-
     text-align: center;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-
     padding: 20px;
     border: none;
     border-radius: 30px;
     padding: 20px 30px 20px 30px;
     margin: 20px;
     transition: 0.2s;
-
-    /* box-shadow:  7px 7px 15px #0e0e0f,
-             -7px -7px 15px #181819; */
-    
     box-shadow:  7px 7px 15px #18181a,
              -7px -7px 15px #18181a;
 }
@@ -296,21 +260,14 @@ h3 {
     color: #131313;
 }
 
-/* .wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-} */
+
 
 /* Toolbox Section */
 .toolbox-section {
-    /* height: 60vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 200px 0px 220px 0px;
-    /* background: palegoldenrod; */
-    /* background: palegreen; */
 }
 
 .toolbox-container {
@@ -321,52 +278,23 @@ h3 {
     width: 80vw;
     max-width: 1000px;
     height: auto;
-    /* height: 50%; */
     border-radius: 30px;
     transform-style: preserve-3d;
-    /* background:rgb(102, 1, 1); */
     background: #0c0c0e;
-    /* margin: 20px; */
     margin-top: 50px;
     text-align: center;
     perspective: 1750px;
-
     box-shadow:  0px 28px 29px #101011,
              -14px -14px 29px #181819;
 }
-
-/* #tools {
-    list-style-type: none;
-    padding: 50px;
-    border-radius: 30px;
-} */
-
-/* #handle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 35%;
-    height: 35px;
-    background: linear-gradient(to right, rgb(40, 40, 40), rgb(10, 10, 10), rgb(40, 40, 40));
-    background:rgb(102, 1, 1);
-    box-shadow: 0 0 30px rgb(87, 1, 1);
-    border-radius: 20px;
-    transition-delay: 0.6s;
-} */
 
 /* https://stackoverflow.com/questions/37455152/creating-a-box-flap-open-effect-using-only-css */
 .flap {
     position: absolute;
     background: #131313;
-    
-    /* background-color: #2d3436;
-    background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%); */
-
     width: 100%;
     height: 100%;
     transform-origin: 0 0;
-    /* transition: transform 0.5s 0.5s; */
     transition: transform;
     border-radius: 30px;
     opacity: 0.7;
@@ -391,7 +319,7 @@ h3 {
     opacity: 1;
 } */
 
-
+/* To give flap thickness */
 /* .flap:after {
     background-color: #a37131;
     background-image: -webkit-linear-gradient(hsla(0,0%,100%,.25), hsla(0,0%,0%,.25));
@@ -412,11 +340,7 @@ h3 {
     grid-gap: 1rem;
     margin: 20px;
     margin-bottom: 24px;
-    /* margin-top: 20px; */
-    /* height: 20rem; */
     width: 100%;
-    /* max-width: 1000px; */
-    /* background-color: paleturquoise; */
 }
 
 .tool:nth-child(1){ grid-column: span 2; }
@@ -427,51 +351,22 @@ h3 {
 .tool:nth-child(10){ grid-column: span 2; }
 
 .tool {
-    /* font-weight: bold;
-    letter-spacing: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #131313;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 10px;
-    margin: 3px;
-    padding: 5px 10px 5px 10px;
-    font-size: 20px;
-    height: 5%;
-    opacity: 0;
-    transition: 0.2s; */
-
-    /* background: linear-gradient(145deg, #141415, #111112);
-    box-shadow:  5px 5px 10px #101011,
-             -5px -5px 10px #161617; */
-
-    /* background: #262626; */
-    /* background: #131313; */
     display: inline-block;
     background: #222222;
-    
-    /* box-shadow:  9px 9px 29px #121213,
-             -9px -9px 29px #141415; */
-
     font-size: 25px;
     font-weight: bold;
     letter-spacing: 0.3rem;
     text-indent: 0.3rem;
-    /* background: palevioletred; */
     text-align: center;
     vertical-align: middle;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    /* opacity: 0; */
     box-shadow: 2px 4px #161616;
     opacity: 0;
     transition: 0.3s;
     padding: 15px;
-    
 }
 
 .tool-seen { 
@@ -484,13 +379,11 @@ h3 {
     100% { transform: translateY(0); }
 }
 
-
 #tool-java { 
     background: linear-gradient(to right, #f4821a 25%, #5191be 70%);
 	-webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
-    /* text-shadow: -5px 0px 10px #f4831a, 5px 0px 10px #4e7896; */
 }
 
 #java-left { text-shadow: 0px 0px 20px #f4831a; }
@@ -501,7 +394,6 @@ h3 {
 	-webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
-    /* text-shadow: -10px 0px 20px #fecf429d, 10px 0px 20px #3c80bb; */
 }
 
 #python-left { text-shadow: 0px 0px 20px #fed042; }
@@ -571,36 +463,10 @@ h3 {
     text-shadow: 0px 0px 30px #f6d244c5;
 }
 
-/* .tool-seen {
-    transition: 0.2s;
-    opacity: 1;
-    margin: 2px;
-} */
 
-/* .flap-move {
-    transform: rotateX(170deg);
-    transition: transform 0.5s 0.5s;
-} */
-
-
-/* #toolbox-container:hover #flap {
-    transform: rotateX(170deg);
-    transition: transform 0.5s 0.5s;
-} */
-
-/* #toolbox-container:hover #handle {
-    opacity: 0%;
-    transition-delay: 0.6s;
-} */
-
-/* .project-content:not(:hover) {
-    opacity: 0;
-} */
 
 /* LEARNER SECTION */
-.learner {
-    margin: 0px;
-}
+.learner { margin: 0px; }
 
 .courses {
     display: flex;
@@ -642,15 +508,11 @@ h3 {
     font-size: 60px;
     font-weight: bold;
     width: 50%;
-    /* text-align: center; */
     text-align: right;
     position: absolute;
-    /* top: 50%;
-    left: 50%; */
     top: 100%;
     left: 100%;
     padding: 30px;
-    /* transform: translate(-50%, -50%); */
     transform: translate(-100%, -100%);
     transition: 0.2s;
     line-height: 100%;
@@ -691,7 +553,6 @@ h3 {
     margin: 5px 0px 5px 0px;
     overflow: hidden;
     white-space: nowrap;
-    /* animation-play-state: running; */
 }
 
 .course:hover .course-title { opacity: 0; }
@@ -730,7 +591,6 @@ h3 {
 .course:hover .marquee-right2 { animation-play-state: running; }
 
 /* https://gist.github.com/Jaskaranbir/eb0f26d0ba47f55e25fde3b63d8b7ef4 */
-
 @keyframes marquee1 {
     from { transform: translateX(0%); }
     to { transform: translateX(-100%); }
@@ -741,8 +601,20 @@ h3 {
     to { transform: translateX(-101%);}
 }
 
+/* Course gradients - some from https://uigradients.com/ */
+#csc108 { background: -webkit-linear-gradient(to right, #A5CC82, #2980B9); background: linear-gradient(to right, #A5CC82, #2980B9); }
+#csc148 { background: -webkit-linear-gradient(to right, #2980B9, #9796f0); background: linear-gradient(to right, #2980B9, #9796f0); }
+#csc165 { background: -webkit-linear-gradient(to right, #9796f0, #F7BB97); background: linear-gradient(to right, #9796f0, #F7BB97); }
+#sta130 { background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89); background: linear-gradient(to right, #F7BB97, #DD5E89); }
+#csc207 { background: -webkit-linear-gradient(to right, #DD5E89, #12D8FA); background: linear-gradient(to right, #DD5E89, #12D8FA); }
+#csc209 { background: -webkit-linear-gradient(to right, #12D8FA, #F9D423); background: linear-gradient(to right, #12D8FA, #F9D423); }
+#csc236 { background: -webkit-linear-gradient(to right, #F9D423, #E94057); background: linear-gradient(to right, #F9D423, #E94057); }
+#csc258 { background: -webkit-linear-gradient(to right, #E94057, #86A8E7); background: linear-gradient(to right, #E94057, #86A8E7); }
+#csc263 { background: -webkit-linear-gradient(to right, #86A8E7, #20B2AA); background: linear-gradient(to right, #86A8E7, #20B2AA); }
 
-/* For smaller screens */
+
+
+/* Mobile adjustments */
 @media only screen and (max-width: 750px) {
     body {
         padding-left: 5%;
@@ -751,23 +623,17 @@ h3 {
 
     h2 { font-size: 35px; }
 
-    .section-title {
-        padding: 5px 10px 5px 10px;
-    }
+    .section-title { padding: 5px 10px 5px 10px;}
 
     .project {
         min-width: 80vw;
         padding: 25px;
         margin: 10px;
-        /* box-shadow:  7px 7px 14px #0e0e0f,
-             -7px -7px 14px #181819; */
-        
         box-shadow:  7px 7px 14px #18181a,
              -7px -7px 14px #18181a;
     }
 
     .project:hover { transform: none; }
-
     .project-title { font-size: 30px; }
     .project-content { margin: 2px; }
     
@@ -779,16 +645,7 @@ h3 {
         padding: 10px;
     }
 
-    /* #toolbox-container {
-        min-width: 80vw;
-        width: 50%;
-        height: 50%;
-    } */
-
     .course {
-        /* min-width: 200px;
-        max-width: 300px;
-        width: 80vw; */
         width: 90vw;
         min-width: 1px;
         max-width: 300px;
@@ -796,7 +653,7 @@ h3 {
 
     .course-wrapper { margin: 10px; }
 
-    /* To turn marquee ON by default on mobile
+    /* Turn marquee ON by default on mobile
     .course-title { opacity: 0; }
     .course-icon { opacity: 0; }
     .course-content { opacity: 1; } 
@@ -806,14 +663,3 @@ h3 {
     .course:not(:hover) .marquee-right1 { animation-play-state:running; }
     .course:not(:hover) .marquee-right2 { animation-play-state:running; } */
 }
-
-/* Some gradients are from https://uigradients.com/ */
-#csc108 { background: -webkit-linear-gradient(to right, #A5CC82, #2980B9); background: linear-gradient(to right, #A5CC82, #2980B9); }
-#csc148 { background: -webkit-linear-gradient(to right, #2980B9, #9796f0); background: linear-gradient(to right, #2980B9, #9796f0); }
-#csc165 { background: -webkit-linear-gradient(to right, #9796f0, #F7BB97); background: linear-gradient(to right, #9796f0, #F7BB97); }
-#sta130 { background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89); background: linear-gradient(to right, #F7BB97, #DD5E89); }
-#csc207 { background: -webkit-linear-gradient(to right, #DD5E89, #12D8FA); background: linear-gradient(to right, #DD5E89, #12D8FA); }
-#csc209 { background: -webkit-linear-gradient(to right, #12D8FA, #F9D423); background: linear-gradient(to right, #12D8FA, #F9D423); }
-#csc236 { background: -webkit-linear-gradient(to right, #F9D423, #E94057); background: linear-gradient(to right, #F9D423, #E94057); }
-#csc258 { background: -webkit-linear-gradient(to right, #E94057, #86A8E7); background: linear-gradient(to right, #E94057, #86A8E7); }
-#csc263 { background: -webkit-linear-gradient(to right, #86A8E7, #20B2AA); background: linear-gradient(to right, #86A8E7, #20B2AA); }
