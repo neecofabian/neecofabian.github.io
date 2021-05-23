@@ -44,6 +44,11 @@ header {
     background-repeat: no-repeat;
 }
 
+.arrow-clear {
+    opacity: 0;
+    transition: 0.4s;
+}
+
 .bounce { animation: bounce 2s infinite; }
 
 @keyframes bounce {
@@ -348,7 +353,6 @@ h3 {
     /* transition: transform 0.5s 0.5s; */
     transition: transform;
     border-radius: 30px;
-    z-index: 5;
     opacity: 0.7;
 }
 
