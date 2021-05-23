@@ -56,16 +56,16 @@ header {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-2rem);
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-1rem);
   }
 }
 
 /* Text format */
 h1 {
-    font-size: 12vw;
+    font-size: 10vw;
     text-align: center;
     line-height: 95%;
     margin-top: 0;
@@ -93,7 +93,7 @@ h3 {
 .top { height: 100vh; }
 
 .bigger {
-    font-size: 25vw;
+    font-size: 27vw;
     font-weight: bold;
     text-align: center;
     vertical-align: middle;
@@ -151,13 +151,18 @@ h3 {
     margin: 20px;
     /* box-shadow: 0 0 14px #121314; */
 
-    box-shadow:  14px 14px 29px #0e0e0f,
-             -14px -14px 29px #181819;
+    /* box-shadow:  14px 14px 29px #0e0e0f,
+             -14px -14px 29px #181819; */
+
+    box-shadow:  10px 10px 20px #18181a,
+             -10px -10px 20px #18181a;
+             
     border-radius: 30px;
     line-height: 150%;
     max-width: 500px;
     position: relative;
     justify-content: space-between;
+    transition: 0.3s ease;
 }
 
 /* Titles */
@@ -201,6 +206,11 @@ h3 {
 .project-content {
     opacity: 0;
     transition: 0.2s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
 }
 
 .project:hover .project-content {
@@ -271,8 +281,11 @@ h3 {
     margin: 20px;
     transition: 0.2s;
 
-    box-shadow:  7px 7px 15px #0e0e0f,
-             -7px -7px 15px #181819;
+    /* box-shadow:  7px 7px 15px #0e0e0f,
+             -7px -7px 15px #181819; */
+    
+    box-shadow:  7px 7px 15px #18181a,
+             -7px -7px 15px #18181a;
 }
 
 .all-projects-button:hover {
@@ -742,9 +755,14 @@ h3 {
         min-width: 80vw;
         padding: 25px;
         margin: 10px;
-        box-shadow:  7px 7px 14px #0e0e0f,
-             -7px -7px 14px #181819;
+        /* box-shadow:  7px 7px 14px #0e0e0f,
+             -7px -7px 14px #181819; */
+        
+        box-shadow:  7px 7px 14px #18181a,
+             -7px -7px 14px #18181a;
     }
+
+    .project:hover { transform: none; }
 
     .project-title { font-size: 30px; }
     .project-content { margin: 2px; }
