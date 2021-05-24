@@ -301,10 +301,6 @@ h3 {
     z-index: 1;
 }
 
-.section-title.sticky .flap {
-    z-index: 0;
-}
-
 /* .flap-text {
     display: flex;
     flex-wrap: wrap;
