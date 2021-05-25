@@ -2,18 +2,18 @@ $('.course').width($('.marquee-left1').width()); // for marquee
 
 // Pivot courses when not on mobile
 if (!(window.matchMedia("only screen and (max-width: 750px)").matches)) {
-    pivot.init({
-        selector: ".course",
-        shine: true,
+    // Using vanilla-tilt.js
+    VanillaTilt.init(document.querySelectorAll(".course"), {
+      max: 5,
+      speed: 300,
+      glare: true,
+      "max-glare": 0.4
     });
 
-    // alt pivot test
-
-    // VanillaTilt.init(document.querySelectorAll(".course"), {
-    //   max: 5,
-    //   speed: 300,
-    //   glare: true,
-    //   "max-glare": 0.4
+    // Using pivot.js
+    // pivot.init({
+    //     selector: ".course",
+    //     shine: true,
     // });
 }
 

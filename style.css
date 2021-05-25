@@ -104,14 +104,6 @@ h3 {
     line-height: 45%;
 }
 
-/* .section-title-wrapper {
-    display: block;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    z-index: 10;
-} */
-
 .section-title {
     display: block;
     /* display: inline-block; */
@@ -502,9 +494,9 @@ h3 {
     flex-direction: column;
     background: #131313;
     padding: 25px;
-    box-shadow: 0 0 14px #121314;
-    /* box-shadow:  20px 20px 31px #191a1b,
-    -20px -20px 31px #1f2023; */
+    /* box-shadow: 0 0 14px #121314; */
+    box-shadow:  20px 20px 31px #191a1b,
+    -20px -20px 31px #1f2023;
     border-radius: 30px;
     line-height: 150%;
     max-width: 300px;
@@ -514,7 +506,7 @@ h3 {
     overflow: hidden;
     justify-content: space-between;
     z-index: 1;
-    transform: translateZ(-100px);
+    transform: translateZ(-100px) ease;
 }
 
 .course-title {
