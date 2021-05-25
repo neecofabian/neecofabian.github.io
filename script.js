@@ -2,19 +2,19 @@ $('.course').width($('.marquee-left1').width()); // for marquee
 
 // Pivot courses when not on mobile
 if (!(window.matchMedia("only screen and (max-width: 750px)").matches)) {
-    // pivot.init({
-    //     selector: ".course",
-    //     shine: true,
-    // });
+    pivot.init({
+        selector: ".course",
+        shine: true,
+    });
 
     // alt pivot test
 
-    VanillaTilt.init(document.querySelectorAll(".course"), {
-      max: 5,
-      speed: 300,
-      glare: true,
-      "max-glare": 0.4
-    });
+    // VanillaTilt.init(document.querySelectorAll(".course"), {
+    //   max: 5,
+    //   speed: 300,
+    //   glare: true,
+    //   "max-glare": 0.4
+    // });
 }
 
 gsap.registerPlugin("ScrollTrigger");

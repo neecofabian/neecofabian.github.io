@@ -104,20 +104,20 @@ h3 {
     line-height: 45%;
 }
 
-.section-title-wrapper {
+/* .section-title-wrapper {
     display: block;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
     z-index: 10;
-}
+} */
 
 .section-title {
-    /* display: block; */
-    display: inline-block;
-    /* position: -webkit-sticky;
-    position: sticky; */
-    /* top: 0px; */
+    display: block;
+    /* display: inline-block; */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
     z-index: 10;
     padding: 10px;
     -webkit-backdrop-filter: blur(10px);
