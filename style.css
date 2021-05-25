@@ -513,6 +513,7 @@ h3 {
     overflow: hidden;
     justify-content: space-between;
     z-index: 1;
+    transform: translateZ(-100px);
 }
 
 .course-title {

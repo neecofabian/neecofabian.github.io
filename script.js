@@ -10,9 +10,10 @@ if (!(window.matchMedia("only screen and (max-width: 750px)").matches)) {
     // alt pivot test
 
     VanillaTilt.init(document.querySelectorAll(".course"), {
-      max: 8,
+      max: 5,
       speed: 300,
-      glare: true
+      glare: true,
+      "max-glare": 0.4
     });
 }
 
