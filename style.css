@@ -22,6 +22,8 @@ body {
     color: white;
     padding-left: 10%;
     padding-right: 10%;
+    max-width: 2750px;
+    margin: auto;
 }
 
 header {
@@ -102,12 +104,20 @@ h3 {
     line-height: 45%;
 }
 
-.section-title {
-    /* display: block; */
-    display: inline-block;
+.section-title-wrapper {
+    display: block;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
+    z-index: 10;
+}
+
+.section-title {
+    /* display: block; */
+    display: inline-block;
+    /* position: -webkit-sticky;
+    position: sticky; */
+    /* top: 0px; */
     z-index: 10;
     padding: 10px;
     -webkit-backdrop-filter: blur(10px);
