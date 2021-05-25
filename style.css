@@ -494,6 +494,7 @@ h3 {
     justify-content: center;
     min-height: 1px;
     margin: 15px;
+    transform: translateZ(-100px);
 }
 
 .course {
