@@ -112,10 +112,16 @@ h3 {
     top: 0px;
     z-index: 10;
     padding: 10px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     border-radius: 15px;
     text-shadow: 1px 1px 10px #131313;
+    background-color: rgba(28, 29, 31, 0.8);
+}
+
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+    .section-title {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
 }
 
 /* PROGRAMMER SECTION */
