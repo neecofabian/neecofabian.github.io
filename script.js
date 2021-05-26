@@ -4,7 +4,7 @@ $('.course').width($('.marquee-left1').width()); // for marquee
 if (!(window.matchMedia("only screen and (max-width: 750px)").matches)) {
     // Using vanilla-tilt.js
     VanillaTilt.init(document.querySelectorAll(".course"), {
-      max: 5,
+      max: 7,
       speed: 300,
       glare: true,
       "max-glare": 0.4
