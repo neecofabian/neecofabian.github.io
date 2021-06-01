@@ -670,9 +670,9 @@ h3 {
     transform: translateZ(-100px);
 }
 
-#red-circle { background: radial-gradient(#FF6666 0%, rgba(0, 0, 0, 0.001) 70%); }
-#blue-circle { background: radial-gradient(#3399FF 0%, rgba(0, 0, 0, 0.001) 70%); }
-#green-circle { background: radial-gradient(#66FF66 0%, rgba(0, 0, 0, 0.001) 70%); }
+#red-circle { background: radial-gradient(#FF6666 0%, rgba(28, 29, 31, 0.1) 70%); }
+#blue-circle { background: radial-gradient(#3399FF 0%, rgba(28, 29, 31, 0.1) 70%); }
+#green-circle { background: radial-gradient(#66FF66 0%, rgba(28, 29, 31, 0.1) 70%); }
 
 .worker-text {
     display: flex;
