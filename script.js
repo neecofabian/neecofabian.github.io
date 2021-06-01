@@ -1,4 +1,4 @@
-$('.course').width($('.marquee-left1').width()); // for marquee
+$('.course').width($('.marquee-left1').width()); // For the marquees
 
 // Pivot courses when not on mobile
 if (!(window.matchMedia("only screen and (max-width: 750px)").matches)) {
@@ -10,14 +10,22 @@ if (!(window.matchMedia("only screen and (max-width: 750px)").matches)) {
       "max-glare": 0.4
     });
 
-    // Using pivot.js
-    // pivot.init({
-    //     selector: ".course",
-    //     shine: true,
-    // });
+    // pivot.init({selector: ".course", shine: true}); // Using pivot.js
 }
 
+
 gsap.registerPlugin("ScrollTrigger");
+
+// Fade the chevron
+gsap.to(".arrow", {
+  opacity: 0,
+  scrollTrigger: {
+      trigger: ".arrow",
+      start: "top center+=10%",
+      end: "top center-=10%",
+      scrub: true
+  }
+})
 
 // Show each tool
 const tools = gsap.utils.toArray('.tool');
@@ -34,30 +42,56 @@ tools.forEach(tool => {
 });
 
 // Flip the flap
-var timeline = gsap.timeline();
-timeline.to(".flap", { rotationX: 180, })
+var toolTimeline = gsap.timeline();
+toolTimeline.to(".flap", { rotationX: 180, })
 ScrollTrigger.create({
     trigger: ".tools",
-    animation: timeline,
+    animation: toolTimeline,
     start: "top center+=15%",
     end: "top center-=15%",
     scrub: true,
     // toggleClass: {targets: ".flap-text", className: "flap-text-seen"}
 })
 
-gsap.to(".arrow", {
-    opacity: 0,
-    // duration: 0.4,
-    scrollTrigger: {
-        trigger: ".arrow",
-        start: "top center+=10%",
-        end: "top center-=10%",
-        scrub: true,
-        
-    }
-  })
-
 // end: () => `+=${document.querySelector(".programmer").offsetHeight}`,
 // toggleClass: ".tool-seen",
 // pinSpacing: false,
 // markers: true,
+
+// Unite the circles
+gsap.registerPlugin(MotionPathPlugin);
+var redCircleTimeline = gsap.timeline();
+var blueCircleTimeline = gsap.timeline();
+var greenCircleTimeline = gsap.timeline();
+
+gsap.set("#red-circle", {xPercent: -50, yPercent: -50, transformOrigin: "50% 50%"});
+gsap.set("#blue-circle", {xPercent: -50, yPercent: -50, transformOrigin: "50% 50%"});
+gsap.set("#green-circle", {xPercent: -50, yPercent: -50, transformOrigin: "50% 50%"});
+
+redCircleTimeline.to("#red-circle", {motionPath: {path: "#red-path", align: "#red-path", end: 0.5} });
+blueCircleTimeline.to("#blue-circle", {motionPath: {path: "#blue-path", align: "#blue-path", end: 0.5} });
+greenCircleTimeline.to("#green-circle", {motionPath: {path: "#green-path", align: "#green-path", end: 0.5} });
+
+ScrollTrigger.create({
+  trigger: ".looking-for",
+  animation: redCircleTimeline,
+  start: "top center+=15%",
+  end: "top center-=15%",
+  scrub: true
+})
+
+ScrollTrigger.create({
+  trigger: ".looking-for",
+  animation: blueCircleTimeline,
+  start: "top center+=15%",
+  end: "top center-=15%",
+  scrub: true
+})
+
+ScrollTrigger.create({
+  trigger: ".looking-for",
+  animation: greenCircleTimeline,
+  start: "top center+=15%",
+  end: "top center-=15%",
+  scrub: true
+})
