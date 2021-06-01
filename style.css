@@ -670,9 +670,9 @@ h3 {
     transform: translateZ(-100px);
 }
 
-#red-circle { background: radial-gradient(#FF6666 0%, transparent 70%); }
-#blue-circle { background: radial-gradient(#3399FF 0%, transparent 70%); }
-#green-circle { background: radial-gradient(#66FF66 0%, transparent 70%); }
+#red-circle { background: radial-gradient(#FF6666 0%, rgba(0, 0, 0, 0.001) 70%); }
+#blue-circle { background: radial-gradient(#3399FF 0%, rgba(0, 0, 0, 0.001) 70%); }
+#green-circle { background: radial-gradient(#66FF66 0%, rgba(0, 0, 0, 0.001) 70%); }
 
 .worker-text {
     display: flex;
@@ -687,13 +687,13 @@ h3 {
     transform: translate(-50%, -50%);
 }
 
-.looking-for { text-shadow: 1px 1px 10px #0c0c0c; }
+.looking-for { text-shadow: 1px 1px 12px #0f1011; }
 
 .resume-link {
     color: #1c1d1f;
     text-decoration: none;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 30px;
     margin: 1.5rem;
     padding: 1rem;
     border: solid #1c1d1f;
