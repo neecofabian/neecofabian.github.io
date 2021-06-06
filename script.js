@@ -23,7 +23,7 @@ gsap.to(".arrow", {
       trigger: ".arrow",
       start: "top center+=10%",
       end: "top center-=10%",
-      scrub: true
+      scrub: 0.4
   }
 })
 
@@ -35,7 +35,7 @@ tools.forEach(tool => {
         trigger: tool,
         start: "top center+=5%",
         // end: "+=150%",
-        scrub: true,
+        scrub: 0.4,
         toggleClass: {targets: tool, className: "tool-seen"},
     }
   })
@@ -49,7 +49,7 @@ ScrollTrigger.create({
     animation: toolTimeline,
     start: "top center+=15%",
     end: "top center-=15%",
-    scrub: true,
+    scrub: 0.4,
     // toggleClass: {targets: ".flap-text", className: "flap-text-seen"}
 })
 
@@ -77,7 +77,7 @@ ScrollTrigger.create({
   animation: redCircleTimeline,
   start: "top center+=15%",
   end: "top center-=15%",
-  scrub: true
+  scrub: 0.4
 })
 
 ScrollTrigger.create({
@@ -85,7 +85,7 @@ ScrollTrigger.create({
   animation: blueCircleTimeline,
   start: "top center+=15%",
   end: "top center-=15%",
-  scrub: true
+  scrub: 0.4
 })
 
 ScrollTrigger.create({
@@ -93,5 +93,5 @@ ScrollTrigger.create({
   animation: greenCircleTimeline,
   start: "top center+=15%",
   end: "top center-=15%",
-  scrub: true
+  scrub: 0.4
 })
