@@ -279,7 +279,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 200px 0px 220px 0px;
+    padding: 200px 0px 20vh 0px;
 }
 
 .toolbox-container {
@@ -486,8 +486,8 @@ h3 {
     justify-content: center;
     margin: 0 auto;
     margin-top: 25px;
-    margin-bottom: 200px;
     min-width: 50px;
+    padding-bottom: 25vh;
 }
 
 .course-wrapper {
@@ -630,10 +630,25 @@ h3 {
 
 /* WORKER SECTION */
 .worker {
+    /* display: flex;
+	flex-direction: column;
+    height: 100vh;
+    position: relative; */
+
+    display: flex;
+	flex-direction: column;
+    border-radius: 25px;
+}
+
+.worker-inner-wrapper {
     display: flex;
 	flex-direction: column;
     height: 100vh;
     position: relative;
+    overflow: hidden;
+    margin-left: -10%; /* To cancel body padding */
+    margin-right: -10%;
+    border-radius: 25px; /*Should I keep this?*/
 }
 
 .path-wrapper {
@@ -751,6 +766,11 @@ h3 {
     }
 
     .course-wrapper { margin: 10px; }
+
+    .worker-inner-wrapper {
+        margin-left: -5%;
+        margin-right: -5%;
+    }
 
     .resume-link { font-size: 20px; }
 
