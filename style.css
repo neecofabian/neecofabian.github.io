@@ -113,79 +113,14 @@ h3 {
     position: sticky;
     top: 0px;
     z-index: 10;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    border-radius: 1rem;
+    padding: 10px;
+    border-radius: 15px;
     text-shadow: 1px 1px 10px #131313;
-    background-color: rgba(28, 29, 31, 0.9); /* For Firefox */
-    justify-content: center;
-    align-items: center;
-}
-
-.section-title-inner-wrapper {
-    display: flex;
-}
-
-.dropdown {
-    display: inline-block;
-    /* flex-direction: column; */
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    /* background: palegoldenrod; */
-}
-
-.dropdown button {
-    background: none;
-    text-decoration: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    text-shadow: 1px 1px 10px #131313;
-    /* background: palegoldenrod; */
-}
-
-.dropdown ul {
-    /* display: none; */
-    pointer-events: none;
-    position: fixed; /* To move dropdown out of stacking context */
-    opacity: 0;
-    /* height: 0; */
-    list-style: none;
-    /* background: palegreen; */
-    transition: ease 0.4s;
-    padding: 0;
-    margin-top: 0.5rem;
-}
-
-.dropdown ul li {
-    background: palevioletred;
-    margin: 0.5rem 0 0.5rem 0;
-    padding: 0.5em 0.5em;
-    border-radius: 1rem;
-    background-color: rgba(28, 29, 31, 0.9); /* For Firefox */
-    
-    /* margin: 1rem;
-    margin-left: 0; */
-    /* margin-left: 0; */
-}
-
-.section-link {
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-}
-
-/* .dropdown button:hover + ul, */
-.dropdown button:focus + ul {
-    /* display: block; */
-    opacity: 1;
-    /* height: auto; */
-    pointer-events: all;
-    transition: ease 0.4s;
+    background-color: rgba(28, 29, 31, 0.8); /* For Firefox */
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    .section-title, .dropdown ul li {
+    .section-title {
         background-color: rgba(28, 29, 31, 0.5);
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
