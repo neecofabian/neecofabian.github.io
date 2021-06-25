@@ -37,6 +37,8 @@ header {
     opacity: 1;
 }
 
+section { padding-bottom: 25vh; }
+
 /* Chevron animation */
 .arrow {
     position: relative;
@@ -80,6 +82,7 @@ h2 {
     font-size: 50px;
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: bold;
 }
 
 h3 {
@@ -112,18 +115,19 @@ h3 {
     position: sticky;
     top: 0px;
     z-index: 10;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0rem 1rem 0rem 1rem;
     border-radius: 1rem;
     background-color: rgba(28, 29, 31, 0.9); /* For Firefox */
-    margin-top: -1vh; /* To prevent small see through bar abover title */
-    margin-bottom: 5vh;
+    margin-top: 0; /* To prevent small see through bar abover title */
+    margin-bottom: 0; /* Children will add to bottom margin */
+    transition: ease 0.2s;
 }
 
 #section-title-worker { margin-bottom: 0; }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     .section-title {
-        background-color: rgba(28, 29, 31, 0.7);
+        background-color: rgba(28, 29, 31, 0.9);
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
     }
@@ -141,8 +145,9 @@ h3 {
     text-shadow: 1px 1px 10px #131313;
     background: none;
     border-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0.5rem 0 0.5rem 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .dropdown-button {
@@ -151,30 +156,47 @@ h3 {
     color: white;
     border-color: transparent;
     background: none;
+    padding: 0.5rem;
 }
 
 .dropdown-items {
-    display: none;  /* Make dropdown invisible */
-    position: relative; /* Take it out of stacking context; relative, static, sticky work*/
-
+    display: block;
+    position: fixed; /* Take it out of stacking context; relative, static, sticky work*/
+    /* Make dropdown invisible */
+    opacity: 0;
+    height: 0;
+    pointer-events: none;
+    transition: ease 0.2s;
     list-style: none;
     padding: 0; /* Cancel default padding */
-    margin: 0.25rem 0 0 0; /* Cancel default margin */
+    margin: 0; /* Cancel default margin */
     text-shadow: none;
 }
 
 .dropdown:hover .dropdown-items {
-    display: block;
+    opacity: 1;
+    height: auto;
+    pointer-events: all;
+    transition: ease 0.2s;
 }
 
 .dropdown-item {
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
     border-radius: 1rem;
     opacity: 1;
+    background-color: rgba(28, 29, 31, 1);
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .dropdown-item {
+        background-color: rgba(28, 29, 31, 0.9);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
 }
 
 .dropdown-item:hover {
-    background: rgba(49, 51, 54, 0.5);
+    background: rgba(49, 51, 54, 1);
     transition: ease 0.2s;
 }
 
@@ -390,7 +412,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 200px 0px 20vh 0px;
+    padding: 200px 0px 0 0px;
 }
 
 .toolbox-container {
@@ -598,7 +620,6 @@ h3 {
     margin: 0 auto;
     margin-top: 25px;
     min-width: 50px;
-    padding-bottom: 25vh;
 }
 
 .course-wrapper {
@@ -848,7 +869,9 @@ h3 {
 
     h2 { font-size: 35px; }
 
-    .section-title { padding: 5px 10px 5px 10px;}
+    .section-title { padding: 0 0.5rem 0 0.5rem; }
+    .ima { padding: 0.3rem 0 0.3rem 0; }
+    .dropdown-button { padding: 0.3rem 0.1rem 0.3rem 0.1rem; }
 
     .triangle { font-size: 12px; }
 
