@@ -175,9 +175,13 @@ h3 {
 
 .dropdown:hover .dropdown-items {
     opacity: 1;
-    height: auto;
+    height: 100%;
     pointer-events: all;
     transition: ease 0.2s;
+}
+
+.dropdown:hover {
+    outline: solid 5px red;
 }
 
 .dropdown-item {
