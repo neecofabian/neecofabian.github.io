@@ -1,11 +1,11 @@
 $('.course').width($('.marquee-left1').width()); // For the marquees
 
 // To make all dropdown options the widest size
-$(document).ready(function() {
-  $(".dropdown-items").css({
-    'width': ($(".dropdown-button").width() + 'px')
-  });
-});
+// $(document).ready(function() {
+//   $(".dropdown-items").css({
+//     'width': ($(".dropdown-button").width() + 'px')
+//   });
+// });
 
 // Pivot courses when not on mobile
 if (!(window.matchMedia("only screen and (max-width: 750px)").matches)) {
