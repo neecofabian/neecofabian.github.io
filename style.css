@@ -161,10 +161,11 @@ h3 {
 
 .dropdown-items {
     display: block;
-    position: fixed; /* Take it out of stacking context; relative, static, sticky work*/
+    /* display: none; */
+    position: absolute; /* Take it out of stacking context; relative, static, sticky work*/
     /* Make dropdown invisible */
     opacity: 0;
-    max-height: 0;
+    height: 0;
     pointer-events: none;
     transition: ease 0.2s;
     list-style: none;
@@ -174,8 +175,9 @@ h3 {
 }
 
 .dropdown:hover .dropdown-items {
+    /* display: block; */
     opacity: 1;
-    max-height: 100%;
+    height: auto;
     pointer-events: all;
     transition: ease 0.2s;
 }
