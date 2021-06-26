@@ -117,25 +117,30 @@ h3 {
     z-index: 10;
     padding: 0rem 1rem 0rem 1rem;
     border-radius: 1rem;
-    background-color: rgba(28, 29, 31, 0.9); /* For Firefox */
+    background-color: rgba(28, 29, 31, 0.95); /* For Firefox */
     margin-top: 0; /* To prevent small see through bar abover title */
     margin-bottom: 0; /* Children will add to bottom margin */
-    transition: ease 0.2s;
 }
 
-#section-title-worker { margin-bottom: 0; }
-
+/* Blur section title */
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    .section-title {
-        background-color: rgba(28, 29, 31, 0.9);
-        -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);
+    .section-title { background-color: rgba(28, 29, 31, 0.8); }
+    .section-title::before {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 1rem;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
     }
 }
 
-.section-title-inner-wrapper {
-    display: flex;
-}
+.section-title-inner-wrapper { display: flex; }
 
 .ima {
     display: inline-flex;
@@ -161,59 +166,69 @@ h3 {
 
 .dropdown-items {
     display: block;
-    position: absolute; /* Take it out of stacking context */
+    position: absolute; /* Take out of stacking context */
+    transition: ease 0.1s;
+    list-style: none;
+    padding: 0; /* Cancel default padding, margin */
+    margin: 0;
+    text-shadow: none;
+    
     /* Make dropdown invisible */
     opacity: 0;
     height: 0;
-    pointer-events: none;
-    transition: ease 0.2s;
-    list-style: none;
-    padding: 0; /* Cancel default padding */
-    margin: 0; /* Cancel default margin */
-    text-shadow: none;
+    pointer-events: none;   
 }
 
 .dropdown:hover .dropdown-items {
     opacity: 1;
     height: auto;
     pointer-events: all;
-    transition: ease 0.2s;
 }
 
 .dropdown-item {
+    position: relative;
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
     border-radius: 1rem;
     opacity: 1;
-    background-color: rgba(28, 29, 31, 1);
-}
-
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    .dropdown-item {
-        background-color: rgba(28, 29, 31, 0.9);
-        -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);
-    }
+    background-color: rgba(28, 29, 31, 0.95); /* For Firefox */
+    transition: ease 0.2s;
 }
 
 .dropdown-item:hover {
-    background: rgba(49, 51, 54, 1);
+    background-color: rgba(49, 51, 54, 0.95); /* For Firefox */
     transition: ease 0.2s;
+}
+
+/* Blur nav options */
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .dropdown-item { background-color: rgba(28, 29, 31, 0.8); }
+    .dropdown-item:hover { background-color: rgba(49, 51, 54, 0.8); }
+    .dropdown-item::before {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 1rem;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        transition: none;
+    }
 }
 
 .dropdown-link {
     display: block; /* To give full-width of button to click */
     text-decoration: none;
     color:#999999;
-    transition: ease 0.2s;
 }
 
 .dropdown-link-text { display: inline-block; /* So gradient text's width extends text only, not full background */}
 
 #section-title-text-programmer,
 .dropdown-item-programmer:hover .dropdown-link-programmer {
-    /* background: linear-gradient(to right, #e2ce75 0%, #a3d431 100%); */
-    /* background: linear-gradient(to right, #f8fb91 0%, #f1ce2f 100%); */
-
     /* background: linear-gradient(to right, #e5fb1f 0%, #f4ad06 100%); */
     background: linear-gradient(to right, #aaf569 0%, #08d1a2 100%);
 	-webkit-background-clip: text;
