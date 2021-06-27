@@ -14,6 +14,9 @@ Illuminote blue, pink
 Conference Manager teal, dark teal
 #2eded0
 #1a938a
+
+Yellow Theme 
+background: linear-gradient(to right, #e5fb1f 0%, #f4ad06 100%);
 */
 
 body {
@@ -91,8 +94,9 @@ h3 {
     margin: 0;
     line-height: normal;
     text-align: center;
-    margin-top: 20px;
-    opacity: 70%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    opacity: 60%;
 }
 
 .li-break { margin-bottom: 15px}
@@ -119,8 +123,10 @@ h3 {
     border-radius: 1rem;
     background-color: rgba(28, 29, 31, 0.95); /* For Firefox */
     margin-top: 0; /* To prevent small see through bar abover title */
-    margin-bottom: 0; /* Children will add to bottom margin */
+    margin-bottom: 10vh; /* Children will add to bottom margin */
 }
+
+#section-title-worker { margin-bottom: 0; }
 
 /* Blur section title */
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
@@ -187,7 +193,7 @@ h3 {
 
 .dropdown-item {
     position: relative;
-    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    padding: 0.25rem 0.7rem;
     border-radius: 1rem;
     opacity: 1;
     background-color: rgba(28, 29, 31, 0.95); /* For Firefox */
@@ -225,34 +231,24 @@ h3 {
     color:#999999;
 }
 
-.dropdown-link-text { display: inline-block; /* So gradient text's width extends text only, not full background */}
+.dropdown-link-text { display: inline-block; } /* So gradient text's width extends text only, not full background */
 
 #section-title-text-programmer,
-.dropdown-item-programmer:hover .dropdown-link-programmer {
-    /* background: linear-gradient(to right, #e5fb1f 0%, #f4ad06 100%); */
-    background: linear-gradient(to right, #aaf569 0%, #08d1a2 100%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
-    transition: ease 0.2s;
-}
+.dropdown-item-programmer:hover .dropdown-link-programmer { background: linear-gradient(to right, #aaf569 0%, #08d1a2 100%); }
 
 #section-title-text-learner,
-.dropdown-item-learner:hover .dropdown-link-learner {
-    /* background: linear-gradient(to right, #12D8FA 0%, #2980B9 100%); */
-    /* background: linear-gradient(to right, #78d9fa 0%, #309bff 100%); */
-    background: linear-gradient(to right, #3feafa 0%, #3196e9 100%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
-    transition: ease 0.2s;
-}
+.dropdown-item-learner:hover .dropdown-link-learner { background: linear-gradient(to right, #3feafa 0%, #3196e9 100%); }
 
 #section-title-text-worker,
-.dropdown-item-worker:hover .dropdown-link-worker {
-    /* background: linear-gradient(to right, #e05b5b 0%, #d1354a 100%); */
-    background: linear-gradient(to right, #ffa76c 0%, #fb6666 100%);
-	-webkit-background-clip: text;
+.dropdown-item-worker:hover .dropdown-link-worker { background: linear-gradient(to right, #ffa76c 0%, #fb6666 100%); }
+
+#section-title-text-programmer,
+.dropdown-item-programmer:hover .dropdown-link-programmer,
+#section-title-text-learner,
+.dropdown-item-learner:hover .dropdown-link-learner,
+#section-title-text-worker,
+.dropdown-item-worker:hover .dropdown-link-worker { 
+    -webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
     transition: ease 0.2s;
@@ -291,8 +287,6 @@ h3 {
     width: 100%;
     padding: 50px;
     margin: 20px;
-    /* box-shadow:  14px 14px 29px #0e0e0f,
-             -14px -14px 29px #181819; */
     box-shadow:  10px 10px 20px #18181a,
              -10px -10px 20px #18181a;
     border-radius: 30px;
@@ -342,11 +336,7 @@ h3 {
     transition: 0.3s ease;
 }
 
-.project:hover .project-content {
-    opacity: 1;
-    transition: 0.2s;
-}
-
+.project:hover .project-content, 
 .project:hover .project-button {
     opacity: 1;
     transition: 0.2s;
@@ -412,9 +402,6 @@ h3 {
 }
 
 .all-projects-button:hover {
-    /* background: white; */
-    /* background: linear-gradient(to right, #e2ce75 0%, #a3d431 100%); */
-    /* background: linear-gradient(to right, #e5fb1f 0%, #f4ad06 100%); */
     background: linear-gradient(to right, #aaf569 0%, #08d1a2 100%);
     transition: ease 0.4s;
     color: #131313;
@@ -460,38 +447,6 @@ h3 {
     opacity: 0.7;
     z-index: 1;
 }
-
-/* .flap-text {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    -moz-transform: scale(1, -1);
-    -webkit-transform: scale(1, -1);
-    -o-transform: scale(1, -1);
-    -ms-transform: scale(1, -1);
-    transform: scale(1, -1);
-    opacity: 0;
-}
-
-.flap-text-seen {
-    opacity: 1;
-} */
-
-/* To give flap thickness */
-/* .flap:after {
-    background-color: #a37131;
-    background-image: -webkit-linear-gradient(hsla(0,0%,100%,.25), hsla(0,0%,0%,.25));
-    bottom: 0;
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    -webkit-transform: rotateX(-90deg);
-    -webkit-transform-origin: 100% 50%;
-} */
 
 .tools {
     display: grid;
@@ -539,94 +494,100 @@ h3 {
     100% { transform: translateY(0); }
 }
 
-#tool-java { 
-    background: linear-gradient(to right, #f4821a 25%, #5191be 70%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
+#tool-java { background: linear-gradient(to right, #f4821a 25%, #5191be 70%); }
 #java-left { text-shadow: 0px 0px 20px #f4831a; }
 #java-right { text-shadow: 0px 0px 20px #5887a8; }
 
-#tool-python { 
-    background: linear-gradient(to right, #dbb339 20%, #3d80bb 75%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
+#tool-python { background: linear-gradient(to right, #dbb339 20%, #3d80bb 75%); }
 #python-left { text-shadow: 0px 0px 20px #fed042; }
 #python-right { text-shadow: 0px 0px 30px #3470a3; }
 
 #tool-git { 
     background: linear-gradient(to right, #f0563b 0%, #b43b25 100%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 30px #f0563b;
 }
 
 #tool-c { 
     background: linear-gradient(to right, #6c7bd3 0%, #3541a0 100%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 20px #6c7bd3;
 }
 
 #tool-unix { 
     background: linear-gradient(to right, #169e5a 0%, #0c5d35 100%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 30px #169e5a;
 }
 
 #tool-r { 
     background: linear-gradient(to right, #256fca 0%, #1c5499 80%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 20px #256fca;
 }
 
 #tool-asm { 
     background: linear-gradient(to right, #6a94d8 0%, #2c579ce3 100%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 30px #6a94d8;
 }
 
 #tool-html { 
     background: linear-gradient(to right, #f16528 0%, #ca4220b2 100%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 30px #f16428b7;
 }
 
 #tool-css { 
     background: linear-gradient(to right, #2fa9de 0%, #0c72b8 100%);
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 30px #2fa9de;
 }
 
 #tool-js { 
     background: linear-gradient(to right, #f6d344 0%, #c2a627ca 80%);
-	-webkit-background-clip: text;
+    text-shadow: 0px 0px 30px #f6d244c5;
+}
+
+#tool-java, #tool-python, #tool-git, #tool-c, #tool-unix, #tool-r, #tool-asm, #tool-html, #tool-css, #tool-js {
+    -webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px 30px #f6d244c5;
 }
 
 
 
 /* LEARNER SECTION */
 .learner { margin: 0px; }
+
+.uoft-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 80%;
+}
+
+.cs { 
+    display: flex;
+    font-size: min(300px, 8vw);
+    font-weight: bold;
+    margin-right: min(30px, 1vw);
+    margin-bottom: min(25px, 0.8vw);
+}
+
+.specialist { 
+    font-size: min(75px, 2vw); 
+    margin-bottom: -0.5vw;
+}
+
+.uoft {
+    font-size: min(150px, 4vw);
+    font-weight: bold;
+    background: linear-gradient(to right, #3196e9 0%, #3feafa 100%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.third { opacity: 100%; }
+.translucent { opacity: 60%; }
+
 
 .courses {
     display: flex;
@@ -651,7 +612,7 @@ h3 {
     background: #131313;
     padding: 25px;
     /* box-shadow: 0 0 14px #121314; */
-    box-shadow:  20px 20px 31px #191a1b,
+    box-shadow: 20px 20px 31px #191a1b,
     -20px -20px 31px #1f2023;
     border-radius: 30px;
     line-height: 150%;
@@ -720,36 +681,26 @@ h3 {
 .course:hover .course-icon { opacity: 0; }
 .course:hover .course-content { opacity: 1; }
 
-.marquee-left1 {
+.marquee-left1, .marquee-left2, .marquee-right1, .marquee-right2 { 
     display: inline-block;
-    animation: marquee1 40s linear infinite;
     animation-play-state: paused;
 }
 
-.marquee-left2 {
-    display: inline-block;
-    animation: marquee2 40s linear infinite;
-    animation-play-state: paused;
-}
+.marquee-left1 { animation: marquee1 40s linear infinite; }
+.marquee-left2 { animation: marquee2 40s linear infinite; }
 
 .marquee-right1 {
-    display: inline-block;
     animation: marquee1 40s linear infinite;
     animation-direction: reverse;
-    animation-play-state: paused;
 }
 
 .marquee-right2 {
-    display: inline-block;
     animation: marquee2 40s linear infinite;
     animation-direction: reverse;
-    animation-play-state: paused;
 }
 
-.course:hover .marquee-left1 { animation-play-state:running; }
-.course:hover .marquee-left2 { animation-play-state: running; }
-.course:hover .marquee-right1 { animation-play-state: running; }
-.course:hover .marquee-right2 { animation-play-state: running; }
+.course:hover .marquee-left1, .course:hover .marquee-left2 { animation-play-state:running; }
+.course:hover .marquee-right1, .course:hover .marquee-right2 { animation-play-state: running; }
 
 /* https://gist.github.com/Jaskaranbir/eb0f26d0ba47f55e25fde3b63d8b7ef4 */
 @keyframes marquee1 {
@@ -777,11 +728,6 @@ h3 {
 
 /* WORKER SECTION */
 .worker {
-    /* display: flex;
-	flex-direction: column;
-    height: 100vh;
-    position: relative; */
-
     display: flex;
 	flex-direction: column;
     border-radius: 25px;
@@ -883,6 +829,7 @@ h3 {
     }
 
     h2 { font-size: 35px; }
+    h3 { font-size: 25px; }
 
     .section-title { padding: 0 0.5rem 0 0.5rem; }
     .ima { padding: 0.3rem 0 0.3rem 0; }
@@ -908,6 +855,26 @@ h3 {
         letter-spacing: 0.1rem;
         text-indent: 0.1rem;
         padding: 10px;
+    }
+
+    .uoft-container { 
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 7vw;
+    }
+
+    .cs {
+        line-height: 90%;
+        margin: 0 -1vw;
+        font-size: 20vw;
+    }
+
+    .specialist { font-size: 5vw; }
+
+    .uoft { 
+        font-size: 10vw; 
+        line-height: 95%;
     }
 
     .course {
