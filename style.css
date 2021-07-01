@@ -852,6 +852,7 @@ h3 {
     .project:hover { transform: none; }
     .project-title { font-size: 30px; }
     .project-content { margin: 2px; }
+    .project-description { padding-left: 1rem; }
     
     .toolbox-container { width: 90vw; }
     .tool { 
