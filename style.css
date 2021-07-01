@@ -40,7 +40,7 @@ header {
     opacity: 1;
 }
 
-section { padding-bottom: 25vh; }
+section { padding-bottom: 20vh; }
 
 /* Chevron animation */
 .arrow {
@@ -881,13 +881,11 @@ h3 {
         line-height: 95%;
     }
 
-    .course {
-        width: 90vw;
-        min-width: 1px;
-        max-width: 300px;
+    .course { width: 90vw; }
+    .course-wrapper { 
+        margin: 10px; 
+        overflow: hidden;
     }
-
-    .course-wrapper { margin: 10px; }
 
     .worker-inner-wrapper {
         margin-left: -5%;
