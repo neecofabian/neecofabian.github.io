@@ -102,3 +102,14 @@ ScrollTrigger.create({
   end: "top center-=15%",
   scrub: 0.4
 })
+
+function copyToClipboard() {
+  var copyText = document.querySelector("#email-address");
+  copyText.value = "neecofabian@gmail.com";
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.querySelector(".copied").classList.add("click");
+}
+
+document.querySelector("#email-link").addEventListener("click", copyToClipboard);
