@@ -945,30 +945,12 @@ h3 {
     left: 0;
 }
 
-.reconsider::before { background: #27282b; }
-/* .reconsider::before.animated { animation: typing 4s steps(13) forwards; } */
-
-.reconsider::after {
-    width: 0.15em;
-    background: white;
-    animation: flash 0.8s steps(13) infinite;
-}
-
-/* .reconsider::after.animated {
-    animation: 
-        typing 4s steps(13) forwards,
-        flash 0.8s steps(13) 4s infinite;
-} */
-
-@keyframes typing { to { left: 100%; } }
-@keyframes flash { to { background: transparent; } }
-
-/* 
-Without ScrollTrigger
 
 .reconsider::before {
     background: #27282b;
     animation: typing 4s steps(13) forwards;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
 .reconsider::after {
@@ -976,8 +958,17 @@ Without ScrollTrigger
     background: white;
     animation: 
         typing 4s steps(13) forwards,
-        flash 0.8s steps(13) 4s infinite;
-} */
+        flash 0.5s steps(13) infinite;
+
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing { 
+    87% { left: 100%; } 
+    100% { left: 100%; } 
+}
+@keyframes flash { 100% { background: transparent; } }
 
 
 

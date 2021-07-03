@@ -118,26 +118,3 @@ function copyToClipboard() {
 }
 
 document.querySelector("#email-link").addEventListener("click", copyToClipboard);
-
-
-// Trigger typing and flashing cursor animation
-gsap.registerPlugin(CSSRulePlugin);
-var reconsiderBefore = CSSRulePlugin.getRule(".reconsider::before");
-var reconsiderAfter = CSSRulePlugin.getRule(".reconsider::after");
-
-gsap.to(reconsiderBefore, {
-  cssRule: { animation: "typing 4s steps(13) forwards" },
-  scrollTrigger: {
-    trigger: ".reconsider",
-    start: "top bottom-=20%"
-  }
-})
-
-gsap.to(reconsiderAfter, {
-  // duration: "4s",
-  cssRule: { animation: "typing 4s steps(13) forwards, flash 0.8s steps(13) infinite" },
-  scrollTrigger: {
-    trigger: ".reconsider",
-    start: "top bottom-=20%"
-  }
-})
