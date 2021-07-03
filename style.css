@@ -946,7 +946,7 @@ h3 {
 }
 
 .reconsider::before { background: #27282b; }
-.reconsider::before.animated { animation: typing 4s steps(13) forwards; }
+/* .reconsider::before.animated { animation: typing 4s steps(13) forwards; } */
 
 .reconsider::after {
     width: 0.15em;
@@ -954,11 +954,11 @@ h3 {
     animation: flash 0.8s steps(13) infinite;
 }
 
-.reconsider::after.animated {
+/* .reconsider::after.animated {
     animation: 
         typing 4s steps(13) forwards,
         flash 0.8s steps(13) 4s infinite;
-}
+} */
 
 @keyframes typing { to { left: 100%; } }
 @keyframes flash { to { background: transparent; } }
