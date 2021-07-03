@@ -1,15 +1,17 @@
 $('.course').width($('.marquee-left1').width()); // For the marquees
 
-// To make all dropdown options the widest size
+
+// Make all dropdown options the widest size
 $(document).ready(function() {
   $(".dropdown-items").css({
     'width': ($(".dropdown-button").width() + 'px')
   });
 });
 
+
 // Pivot courses when not on mobile
 if (!(window.matchMedia("only screen and (max-width: 750px)").matches)) {
-    // Using vanilla-tilt.js
+  // Use vanilla-tilt.js
     VanillaTilt.init(document.querySelectorAll(".course"), {
       max: 7,
       speed: 300,
@@ -65,6 +67,7 @@ ScrollTrigger.create({
 // pinSpacing: false,
 // markers: true,
 
+
 // Unite the circles
 gsap.registerPlugin(MotionPathPlugin);
 var redCircleTimeline = gsap.timeline();
@@ -103,6 +106,8 @@ ScrollTrigger.create({
   scrub: 0.4
 })
 
+
+// Copy email to clipboard
 function copyToClipboard() {
   var copyText = document.querySelector("#email-address");
   copyText.value = "neecofabian@gmail.com";
@@ -113,3 +118,25 @@ function copyToClipboard() {
 }
 
 document.querySelector("#email-link").addEventListener("click", copyToClipboard);
+
+
+// Trigger typing and flashing cursor animation
+gsap.registerPlugin(CSSRulePlugin);
+var reconsiderBefore = CSSRulePlugin.getRule(".reconsider::before");
+var reconsiderAfter = CSSRulePlugin.getRule(".reconsider::after");
+
+gsap.to(reconsiderBefore, {
+  cssRule: { animation: "typing 4s steps(13) forwards" },
+  scrollTrigger: {
+    trigger: ".reconsider",
+    start: "top bottom-=20%"
+  }
+})
+
+gsap.to(reconsiderAfter, {
+  cssRule: { animation: "typing 4s steps(13) forwards, flash 0.8s steps(13) infinite" },
+  scrollTrigger: {
+    trigger: ".reconsider",
+    start: "top bottom-=20%"
+  }
+})
