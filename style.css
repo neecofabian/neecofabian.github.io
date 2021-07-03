@@ -912,7 +912,7 @@ h3 {
 
 .contact-link {
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: none;
     background: linear-gradient(to right, #f4f65e 0%, #d69224 100%);
     -webkit-background-clip: text;
     background-clip: text;
