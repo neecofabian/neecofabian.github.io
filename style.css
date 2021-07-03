@@ -878,6 +878,7 @@ h3 {
 #email-address { 
     position: fixed;
     opacity: 0; 
+    height: 0;
 }
 
 .copied {

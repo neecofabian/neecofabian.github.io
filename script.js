@@ -134,6 +134,7 @@ gsap.to(reconsiderBefore, {
 })
 
 gsap.to(reconsiderAfter, {
+  // duration: "4s",
   cssRule: { animation: "typing 4s steps(13) forwards, flash 0.8s steps(13) infinite" },
   scrollTrigger: {
     trigger: ".reconsider",
