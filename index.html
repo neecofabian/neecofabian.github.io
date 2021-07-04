@@ -27,7 +27,7 @@
     <section class="programmer" id="programmer">
         <div class="section-title">
             <div class="section-title-inner-wrapper">
-                <button class="ima"><h2>I'm a </h2></button>
+                <button class="ima" tabindex=-1><h2>I'm a </h2></button>
                 <div class="dropdown">
                     <button class="dropdown-button"><h2 id="section-title-text-programmer">programmer<div class="triangle">▼</div></h2></button>
                     <ul class="dropdown-items">
@@ -46,15 +46,15 @@
         <div class="projects">
             <div class="project" id="conference-manager">
                 <div class="project-content" id="conference-manager-content">
+                    <div class="project-banner">Conference Manager</div>
                     <span class="project-title"><span id="con-man-title-light">Conference </span><span id="con-man-title-dark">Manager</span></span>
                     <p>A hub for managing large conferences.</p>
                     <ul class="project-description">
                         <li>Join as an organizer, attendee, or speaker.</li>
                         <li>Sign up for events and view a sorted schedule.</li>
-                        <li>Network with attendees, speakers, and organizers in the messenger.</li>
+                        <li>Chat and network with attendees, speakers, and organizers.</li>
                         <li>Get suggestions when creating events, rooms and amenities.</li>
-                        <li>See conference statistics.</li>
-                        <li>Receive event reminders.</li>
+                        <li>See conference statistics, receive event reminders.</li>
                         <li class="li-break">Join the conference Discord server.</li>
                         <li>Made with Java, Twilio, Discord API</li>
                         <li>Made by 8 students remotely using Git</li>
@@ -66,7 +66,8 @@
 
             <div class="project">
                 <div class="project-content" id="illuminote-content">
-                    <span class="project-title" id="illuminote-title-blue">Illumi</span><span class="project-title" id="illuminote-title-pink">note</span>
+                    <div class="project-banner">illuminote</div>
+                    <span class="project-title" id="illuminote-title-blue">illumi</span><span class="project-title" id="illuminote-title-pink">note</span>
                     <p>A Mixed Reality multiplayer game in the dark.</p>
                     <ul class="project-description">
                         <li>Place sticky notes on TV, projector screen, or monitor.</li>
@@ -87,7 +88,8 @@
 
             <div class="project" id="lax">
                 <div class="project-content" id="lax-content">
-                    <span class="project-title" id="lax-title"><span id="lax-title-p">L</span><span id="lax-title-b">a</span><span id="lax-title-g">x</span></span>
+                    <div class="project-banner">LAX LAX LAX</div>
+                    <span class="project-title" id="lax-title"><span id="lax-title-p">L</span><span id="lax-title-b">A</span><span id="lax-title-g">X</span></span>
                     <p>A relaxation and productivity centre.</p>
                     <ul class="project-description">
                         <li><b>Breathe</b> - follow visual breathing exercises.</li>
@@ -104,7 +106,8 @@
 
             <div class="project" id="senso">
                 <div class="project-content" id="senso-content">
-                    <span class="project-title">Senso</span>
+                    <div class="project-banner">senso senso</div>
+                    <span class="project-title">senso</span>
                     <p>An app to fidget and focus.</p>
                     <ul class="project-description">
                         <li>Tilt the phone to steer the ball.</li>
@@ -120,6 +123,30 @@
                     <a class="project-button senso-button" href="https://play.google.com/store/apps/details?id=com.kateallsebrook.fidgetball" target="_blank">Get</a>
                 </div>
                 <img class="project-logo" src="images/senso_white_logo.png" alt="Senso logo">
+            </div>
+
+            <div class="project" id="personal-website">
+                <div class="project-content" id="personal-website-content">
+                    <div class="project-banner">neecofabian.com</div>
+                    <span class="project-title" id="personal-website-title">neecofabian.com</span>
+                    <p>My personal website. You’re looking at it!</p>
+                    <ul class="project-description">
+                        <li>Made with:
+                            <ul>
+                                <li>A handful of HTML and CSS</li>
+                                <li>A dash of Vanilla-Tilt.js</li>
+                                <li>A touch of JQuery</li>
+                                <li>A sprinkle of GSAP animations</li>
+                                <li>And a partridge in a pear tree.</li>
+                            </ul>
+                        </li>
+                        <li>Always a work in progress, like me.</li>
+                    </ul>
+                </div>
+                <div>
+                    <a class="project-button senso-button" href="https://github.com/neecofabian/neecofabian.github.io" target="_blank">Learn more</a>
+                </div>
+                <img class="project-logo" id="personal-website-logo" src="images/personal-website-logo.png" alt="personal website logo">
             </div>
             <div class="break"></div> 
             <a class="all-projects-button" href="https://github.com/neecofabian" target="_blank">All my projects</a>
@@ -154,7 +181,7 @@
     <section class="learner" id="learner">
         <div class="section-title">
             <div class="section-title-inner-wrapper">
-                <button class="ima"><h2>I'm a </h2></button>
+                <button class="ima" tabindex=-1><h2>I'm a </h2></button>
                 <div class="dropdown">
                     <button class="dropdown-button"><h2 id="section-title-text-learner">learner<div class="triangle">▼</div></h2></button>
                     <ul class="dropdown-items">
@@ -522,7 +549,7 @@
         <!-- Taken out of inner container to be sticky-->
         <div class="section-title" id="section-title-worker">
             <div class="section-title-inner-wrapper">
-                <button class="ima"><h2>I'm a </h2></button>
+                <button class="ima" tabindex=-1><h2>I'm a </h2></button>
                 <div class="dropdown">
                     <button class="dropdown-button"><h2 id="section-title-text-worker">worker<div class="triangle">▼</div></h2></button>
                     <ul class="dropdown-items">
@@ -561,7 +588,7 @@
     <section class="replier" id="replier">
         <div class="section-title" id="section-title-replier">
             <div class="section-title-inner-wrapper">
-                <button class="ima"><h2>I'm a </h2></button>
+                <button class="ima" tabindex=-1><h2>I'm a </h2></button>
                 <div class="dropdown">
                     <button class="dropdown-button"><h2 id="section-title-text-replier">replier<div class="triangle">▼</div></h2></button>
                     <ul class="dropdown-items">

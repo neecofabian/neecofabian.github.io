@@ -308,11 +308,27 @@ h3 {
     position: relative;
     justify-content: space-between;
     transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.project-banner {
+    display: block;
+    position: absolute;
+    font-size: 110px;
+    font-weight: bold;
+    color:hsl(0, 0%, 10%);
+    writing-mode: vertical-rl;
+    letter-spacing: 3px;
+    z-index: -1;
+    white-space: nowrap;
+    top: -3%;
+    left: 87%;
+    transition: 0.3s ease;
 }
 
 /* Project Titles */
 .project-title { 
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     margin: 0;
     line-height: normal;
@@ -325,6 +341,7 @@ h3 {
 #lax-title-p { color: #a630e0; }
 #lax-title-b { color: #0096d9; }
 #lax-title-g { color: #00ab77; }
+#personal-website-title { color: #bfbfbf; }
 
 .project-logo {
     width: 75%;
@@ -336,12 +353,17 @@ h3 {
 }
 
 #lax-logo { width: 40%; }
+#personal-website-logo { width: 30%; }
 
-.project-description { opacity: 0.75; }
+.project-description { 
+    opacity: 0.75; 
+    font-size: 16px;
+}
 
 .project-content {
     opacity: 0;
     transition: 0.2s;
+    overflow: hidden;
 }
 
 .project:hover {
@@ -1010,6 +1032,7 @@ h3 {
     .project-title { font-size: 30px; }
     .project-content { margin: 2px; }
     .project-description { padding-left: 1rem; }
+    .project-banner { display: none; }
     
     .toolbox-container { width: 90vw; }
     .tool { 
@@ -1052,7 +1075,10 @@ h3 {
 
     .resume-link { font-size: 20px; }
 
-    .cta { margin-right: 0; }
+    .cta {
+        margin-left: 8%; 
+        margin-right: auto; 
+    }
 
     .copied { font-size: 0.75rem; }
 
