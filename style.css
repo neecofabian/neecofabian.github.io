@@ -40,7 +40,7 @@ body {
 }
 
 header {
-    height: 100vh;
+    height: 100vh !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,8 +108,6 @@ h3 {
 }
 
 .li-break { margin-bottom: 15px}
-
-.home { height: 100vh; }
 
 .bigger {
     font-size: 27vw;
@@ -323,7 +321,7 @@ h3 {
     white-space: nowrap;
     top: -3%;
     left: 87%;
-    transition: 0.3s ease;
+    cursor: default;
 }
 
 /* Project Titles */
@@ -368,6 +366,11 @@ h3 {
 
 .project:hover {
     transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.project:not(:hover) .project-banner {
+    opacity: 0;
     transition: 0.3s ease;
 }
 
