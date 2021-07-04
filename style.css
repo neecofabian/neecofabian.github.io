@@ -40,7 +40,7 @@ body {
 }
 
 header {
-    height: 100vh !important;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -319,9 +319,32 @@ h3 {
     letter-spacing: 3px;
     z-index: -1;
     white-space: nowrap;
-    top: -3%;
     left: 87%;
     cursor: default;
+}
+
+.project-banner1, .project-banner2 { 
+    display: inline-block;
+    animation-play-state: paused;
+}
+
+.project-banner1 { animation: project-banner1 30s linear infinite; }
+.project-banner2 { animation: project-banner2 30s linear infinite; }
+
+.project:hover .project-banner1, 
+.project:hover .project-banner2 { 
+    animation-play-state: running; 
+}
+
+/* https://gist.github.com/Jaskaranbir/eb0f26d0ba47f55e25fde3b63d8b7ef4 */
+@keyframes project-banner1 {
+    from { transform: translateY(-125%); }
+    to { transform: translateY(-25%); }
+}
+
+@keyframes project-banner2 {
+    from { transform: translateY(-25%); }
+    to { transform: translateY(75%); }
 }
 
 /* Project Titles */
@@ -371,7 +394,7 @@ h3 {
 
 .project:not(:hover) .project-banner {
     opacity: 0;
-    transition: 0.3s ease;
+    transition: 0.2s;
 }
 
 .project:hover .project-content, 
@@ -998,7 +1021,7 @@ h3 {
 
 .footer {
     background: hsl(225, 5%, 8%);
-    margin: 0 -15vw 0 -15vw; 
+    margin: 0 -10vw 0 -10vw; 
     padding: 30px 15vw;
     color:#4f5258;
 }
