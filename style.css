@@ -319,36 +319,10 @@ h3 {
     letter-spacing: 3px;
     z-index: -1;
     white-space: nowrap;
-    top: -9%; /* Temporary */
+    top: -2.5%; 
     left: 87%;
     cursor: default;
 }
-
-.project-banner1, .project-banner2 { 
-    display: inline-block;
-    animation-play-state: paused;
-}
-
-/* Project banner marquee only for desktop */
-/* @media only screen and (min-width: 750px) {
-    .project-banner1 { animation: project-banner1 30s linear infinite; }
-    .project-banner2 { animation: project-banner2 30s linear infinite; }
-
-    .project:hover .project-banner1, 
-    .project:hover .project-banner2 { 
-        animation-play-state: running; 
-    }
-
-    @keyframes project-banner1 {
-        from { transform: translateY(-125%); }
-        to { transform: translateY(-25%); }
-    }
-
-    @keyframes project-banner2 {
-        from { transform: translateY(-25%); }
-        to { transform: translateY(75%); }
-    }
-} */
 
 /* Project Titles */
 .project-title { 
@@ -763,8 +737,15 @@ h3 {
     animation-direction: reverse;
 }
 
-.course:hover .marquee-left1, .course:hover .marquee-left2 { animation-play-state:running; }
-.course:hover .marquee-right1, .course:hover .marquee-right2 { animation-play-state: running; }
+.course:hover .marquee-left1, .course:hover .marquee-left2,
+.course:hover .marquee-right1, .course:hover .marquee-right2 { 
+    animation-play-state: running; 
+}
+
+.course:not(:hover) .marquee-left1, .course:not(:hover) .marquee-left2,
+.course:not(:hover) .marquee-right1, .course:not(:hover) .marquee-right2 { 
+    animation-play-state: paused; 
+}
 
 /* https://gist.github.com/Jaskaranbir/eb0f26d0ba47f55e25fde3b63d8b7ef4 */
 @keyframes marquee1 {
@@ -1060,7 +1041,7 @@ h3 {
     .project:hover { transform: none; }
     .project-title { font-size: 30px; }
     .project-content { margin: 2px; }
-    .project-description { padding-left: 1rem; }
+    .project-description { padding-left: 1.5rem; }
     .project-banner { display: none; }
     
     .toolbox-container { width: 90vw; }
