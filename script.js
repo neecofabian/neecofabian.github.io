@@ -129,13 +129,27 @@ function copyToClipboard2() {
 document.querySelector("#email-link").addEventListener("click", copyToClipboard);
 document.querySelector("#email-footer-link").addEventListener("click", copyToClipboard2);
 
-// Fade the chevron
+
+// Fade the logo link in 
 gsap.to(".logo-link", {
   opacity: 1,
   scrollTrigger: {
       trigger: ".arrow",
-      start: "top center+=10%",
+      start: "top top+=10%",
       end: "top top",
       scrub: 0.2
   }
 })
+
+
+// Recalculate logo link position when max width of sections is reached, on reize
+function shiftLogoLink() {
+  if (document.querySelector(".programmer").offsetWidth >= 2250) {
+    var rightPadding = (window.innerWidth - 2250) / 2;
+    document.querySelector(".logo-link").style.right = rightPadding.toString() + "px";
+  } else {
+    document.querySelector(".logo-link").style.right = "10vw";
+  }
+}
+
+window.addEventListener('resize', shiftLogoLink);
