@@ -117,4 +117,25 @@ function copyToClipboard() {
   document.querySelector(".copied").classList.add("click");
 }
 
+function copyToClipboard2() {
+  var copyText = document.querySelector("#email-address");
+  copyText.value = "neecofabian@gmail.com";
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.querySelector(".copied2").classList.add("click");
+}
+
 document.querySelector("#email-link").addEventListener("click", copyToClipboard);
+document.querySelector("#email-footer-link").addEventListener("click", copyToClipboard2);
+
+// Fade the chevron
+gsap.to(".logo-link", {
+  opacity: 1,
+  scrollTrigger: {
+      trigger: ".arrow",
+      start: "top center+=10%",
+      end: "top top",
+      scrub: 0.2
+  }
+})
