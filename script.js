@@ -142,7 +142,7 @@ gsap.to(".logo-link", {
 })
 
 
-// Recalculate logo link position when max width of sections is reached, on reize
+// Recalculate logo position on resize and reload if max section width reached
 function shiftLogoLink() {
   if (document.querySelector(".programmer").offsetWidth >= 2250) {
     var rightPadding = (window.innerWidth - 2250) / 2;
@@ -153,3 +153,4 @@ function shiftLogoLink() {
 }
 
 window.addEventListener('resize', shiftLogoLink);
+window.addEventListener('load', shiftLogoLink);
