@@ -9,17 +9,14 @@ $(document).ready(function() {
 });
 
 
-// Pivot courses when not on mobile
+// Pivot courses when not on mobile with vanilla-tilt.js
 if (!(window.matchMedia("only screen and (max-width: 750px)").matches)) {
-  // Use vanilla-tilt.js
     VanillaTilt.init(document.querySelectorAll(".course"), {
       max: 7,
       speed: 300,
       glare: true,
       "max-glare": 0.4
     });
-
-    // pivot.init({selector: ".course", shine: true}); // Using pivot.js
 }
 
 
@@ -43,9 +40,8 @@ tools.forEach(tool => {
     scrollTrigger: {
         trigger: tool,
         start: "top center+=5%",
-        // end: "+=150%",
         scrub: 0.4,
-        toggleClass: {targets: tool, className: "tool-seen"},
+        toggleClass: {targets: tool, className: "tool-seen"}
     }
   })
 });
@@ -58,14 +54,8 @@ ScrollTrigger.create({
     animation: toolTimeline,
     start: "top center+=15%",
     end: "top center-=15%",
-    scrub: 0.4,
-    // toggleClass: {targets: ".flap-text", className: "flap-text-seen"}
+    scrub: 0.4
 })
-
-// end: () => `+=${document.querySelector(".programmer").offsetHeight}`,
-// toggleClass: ".tool-seen",
-// pinSpacing: false,
-// markers: true,
 
 
 // Unite the circles
@@ -130,7 +120,7 @@ document.querySelector("#email-link").addEventListener("click", copyToClipboard)
 document.querySelector("#email-footer-link").addEventListener("click", copyToClipboard2);
 
 
-// Fade the logo link in 
+// Fade the logo link
 gsap.to(".logo-link", {
   opacity: 1,
   scrollTrigger: {
