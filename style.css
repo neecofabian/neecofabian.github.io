@@ -891,13 +891,13 @@ h3 {
 
 @font-face {
     font-family: cousine;
-    src: url(cousine/Cousine-Regular.ttf);
+    src: url(cousine-font/Cousine-Regular.ttf);
     font-weight: normal;
 }
 
 @font-face {
     font-family: cousine;
-    src: url(cousine/Cousine-Bold.ttf);
+    src: url(cousine-font/Cousine-Bold.ttf);
     font-weight: bold;
 }
 
