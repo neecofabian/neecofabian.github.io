@@ -907,7 +907,7 @@ h3 {
     background: #27282b;
     border-radius: 30px;
     padding: 1.5rem 3rem;
-    line-height: 190%;
+    line-height: 210%;
     letter-spacing: 4px;
 }
 
@@ -1164,8 +1164,8 @@ h3 {
     .contacts {
         font-size: 3.5vw;
         padding: 0.4rem 1.3rem;
-        letter-spacing: 2px;
-        line-height: 225%;
+        letter-spacing: 1px;
+        line-height: 250%;
     }
 
     .copied { font-size: 0.75rem; }
@@ -1184,5 +1184,16 @@ h3 {
         position: absolute;
         top: 100%;
         width: 50vw;
+    }
+}
+
+/* Mobile Small adjustments */
+@media only screen and (max-width: 350px) {
+    h2 {font-size: 9vw;}
+    .contacts { 
+        padding: 0.5rem 0.75rem;
+        font-size: 5vw;
+        letter-spacing: normal;
+        line-height: 350%; 
     }
 }
