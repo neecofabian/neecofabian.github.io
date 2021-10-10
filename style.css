@@ -357,9 +357,11 @@ h3 {
 #illuminote-title-pink { color: #fc5f94; }
 #con-man-title-light { color: #2eded0; }
 #con-man-title-dark { color: #1a938a; }
+#centi-title {color: #B9D5E0; }
 #lax-title-p { color: #a630e0; }
 #lax-title-b { color: #0096d9; }
 #lax-title-g { color: #00ab77; }
+#bowlo-title { color: #E63946; }
 #personal-website-title { color: #bfbfbf; }
 
 .project-description { 
@@ -403,9 +405,11 @@ h3 {
     filter: brightness(60%);
 }
 
+.bowlo-button { background: linear-gradient(to right, #f13d4c, #a32631); }
 #illuminote-button1 { background: linear-gradient(to right, #58d0ff, #367f9c); }
 #illuminote-button2 { background: linear-gradient(to right, #fc5f94, #b9456c); }
 #conference-manager-button { background: linear-gradient(to right, #2eded0, #1a938a); }
+#centipede-button { background: linear-gradient(to right, #B9D5E0, #4D6C77); }
 #lax-button { background: linear-gradient(to right, #bb38fe, #0096d9, #00ab77); }
 .senso-button { background: linear-gradient(to right, rgb(212, 212, 212), rgb(156, 156, 156)); }
 
@@ -418,6 +422,7 @@ h3 {
     transition: 0.2s;
 }
 
+#centipede-logo { width: 30%; }
 #lax-logo { width: 40%; }
 #personal-website-logo { width: 30%; }
 
@@ -898,6 +903,12 @@ h3 {
 @font-face {
     font-family: cousine;
     src: url(cousine-font/Cousine-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(raleway-font/Raleway-Bold.ttf);
     font-weight: bold;
 }
 
