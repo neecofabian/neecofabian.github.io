@@ -370,7 +370,12 @@ h3 {
 #personal-website-title { color: #bfbfbf; }
 #bst-title-1 { color: #32a952; }
 #bst-title-2 { color: #0f7d69; }
-#wi-find-title { color: #376df7}
+#wi-find-title { color: #376df7; }
+#pixel-135-title-pixel {color: #c7c5ad; }
+#pixel-135-title-1 {color: #D85858; }
+#pixel-135-title-3 {color: #1DAF4B; }
+#pixel-135-title-5 {color: #3084E5; }
+#misc-title {color: #9397fb; }
 
 .project-description { 
     opacity: 0.75; 
@@ -423,6 +428,8 @@ h3 {
 #senso-button { background: linear-gradient(to right, rgb(212, 212, 212), rgb(156, 156, 156)); }
 .bst-button { background: linear-gradient(to right, #32a952, #0f7d69); }
 #wi-find-button { background: linear-gradient(to right, #376df7, #3c39ef); }
+#pixel-135-button { background: linear-gradient(to right, #c7c5ad, #a39f76); }
+.misc-button { background: linear-gradient(to right, #9397fb, #9a2cfb); }
 
 .project-logo {
     width: 75%;
@@ -436,8 +443,10 @@ h3 {
 #centipede-logo { width: 30%; }
 #lax-logo { width: 40%; }
 #personal-website-logo { width: 30%; }
-#bst-logo { width: 40% ;}
+#bst-logo { width: 40%; }
 #wi-find-logo { width: 40%; }
+#pixel-135-logo { width: 30%; }
+#misc-logo { width: 60%; }
 
 .all-projects-button {
     background: #131313;
