@@ -1,11 +1,26 @@
 $('.course').width($('.marquee-left1').width()); // For the marquees
 
+const extraProjects = document.querySelectorAll(".extra-project");
+const extraCourses = document.querySelectorAll(".extra-course");
+const extraProjectsButton = document.querySelector("#more-projects-btn");
+const extraCoursesButton = document.querySelector("#more-courses-btn");
+let hideExtraProjects = true;
+let hideExtraCourses = true;
 
 // Make all dropdown options the widest size
 $(document).ready(function() {
-  $(".dropdown-items").css({
+    $(".dropdown-items").css({
     'width': ($(".dropdown-button").width() + 'px')
-  });
+    });
+});
+
+// Update to correct size on window size change. A bit of a hack.
+$(window).on("resize", function() {
+    $(document).ready(function() {
+        $(".dropdown-items").css({
+        'width': ($(".dropdown-button").width() + 'px')
+        });
+    });
 });
 
 
@@ -44,6 +59,54 @@ tools.forEach(tool => {
         toggleClass: {targets: tool, className: "tool-seen"}
     }
   })
+});
+
+// Hide/show extra projects
+function toggleExtraProjects() {
+    hideExtraProjects = !hideExtraProjects;
+
+    for (let i = 0; i < extraProjects.length; i++) {
+        if (!hideExtraProjects) {
+            extraProjects[i].style.display = "flex";
+        } else {
+            extraProjects[i].style.display = "none";
+        }
+    }
+    ScrollTrigger.refresh();
+}
+
+extraProjectsButton.addEventListener('click', () => {
+    toggleExtraProjects();
+    
+    if (hideExtraProjects) {
+        extraProjectsButton.innerHTML = "Show More";
+    } else {
+        extraProjectsButton.innerHTML = "Show Less";
+    }
+});
+
+// Hide/show extra courses
+function toggleExtraCourses() {
+    hideExtraCourses = !hideExtraCourses;
+
+    for (let i = 0; i < extraCourses.length; i++) {
+        if (!hideExtraCourses) {
+            extraCourses[i].style.display = "flex";
+        } else {
+            extraCourses[i].style.display = "none";
+        }
+    }
+    ScrollTrigger.refresh();
+}
+
+extraCoursesButton.addEventListener('click', () => {
+    toggleExtraCourses();
+    
+    if (hideExtraCourses) {
+        extraCoursesButton.innerHTML = "Show More";
+    } else {
+        extraCoursesButton.innerHTML = "Show Less";
+    }
 });
 
 // Flip the flap

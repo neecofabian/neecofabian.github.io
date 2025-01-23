@@ -300,6 +300,36 @@ h3 {
     width: auto;
 }
 
+.page-button {
+    background: #131313;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    padding: 20px 30px 20px 30px;
+    margin: 20px;
+    transition: ease 0.2s;
+    box-shadow:  7px 7px 15px #18181a,
+             -7px -7px 15px #18181a;
+}
+
+.page-button:hover {
+    transition: ease 0.2s;
+    color: #131313;
+    cursor: pointer;
+}
+
+.programmer-button:hover {
+    background: linear-gradient(to right, #aaf569 0%, #08d1a2 100%);
+}
+
+.learner-button:hover {
+    background: linear-gradient(to right, #3feafa 0%, #3196e9 100%);
+}
+
 
 
 /* PROGRAMMER SECTION */
@@ -331,6 +361,10 @@ h3 {
     justify-content: space-between;
     transition: 0.3s ease;
     overflow: hidden;
+}
+
+.extra-project {
+    display: none;
 }
 
 .project-banner {
@@ -481,30 +515,6 @@ h3 {
 #help-wanted-logo { width: 50%; }
 #speedrun-logo { width: 40%; }
 #outhouse-logo { width: 35%; }
-
-.all-projects-button {
-    background: #131313;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 20px;
-    border: none;
-    border-radius: 30px;
-    padding: 20px 30px 20px 30px;
-    margin: 20px;
-    transition: ease 0.2s;
-    box-shadow:  7px 7px 15px #18181a,
-             -7px -7px 15px #18181a;
-}
-
-.all-projects-button:hover {
-    background: linear-gradient(to right, #aaf569 0%, #08d1a2 100%);
-    transition: ease 0.2s;
-    color: #131313;
-}
-
 
 
 /* Toolbox */
@@ -775,6 +785,10 @@ h3 {
     border-radius: 30px;
     box-shadow: 15px 15px 26px #191a1b,
         -15px -15px 26px #1f2023;
+}
+
+.extra-course {
+    display: none;
 }
 
 .course-title {
@@ -1174,7 +1188,7 @@ h3 {
 
 .version-num {
     font-weight: normal;
-    color: hsl(220, 5%, 18%);
+    color: hsl(220, 5%, 10%);
     margin-left: 15px;
 }
 
