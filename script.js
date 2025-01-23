@@ -39,7 +39,7 @@ tools.forEach(tool => {
   gsap.to(tool, {
     scrollTrigger: {
         trigger: tool,
-        start: "top center+=5%",
+        start: "top center+=12%",
         scrub: 0.4,
         toggleClass: {targets: tool, className: "tool-seen"}
     }

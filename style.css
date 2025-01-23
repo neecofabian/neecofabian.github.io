@@ -548,25 +548,38 @@ h3 {
 
 .tools {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(auto, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 0.75rem;
     margin: 20px;
     margin-bottom: 24px;
     width: 100%;
 }
 
-.tool:nth-child(1){ grid-column: span 2; }
-.tool:nth-child(2){ grid-column: span 2; }
-.tool:nth-child(5){ grid-column: span 3; }
-.tool:nth-child(7){ grid-column: span 5; }
-.tool:nth-child(8){ grid-column: span 2; }
-.tool:nth-child(10){ grid-column: span 2; }
+.tool:nth-child(1){ grid-column: span 5; }
+.tool:nth-child(2){ grid-column: span 5; }
+.tool:nth-child(3){ grid-column: span 3; }
+.tool:nth-child(4){ grid-column: span 3; }
+
+.tool:nth-child(5){ grid-column: span 4; }
+.tool:nth-child(6){ grid-column: span 5; }
+.tool:nth-child(7){ grid-column: span 4; }
+.tool:nth-child(8){ grid-column: span 3; }
+
+.tool:nth-child(9){ grid-column: span 3; }
+.tool:nth-child(10){ grid-column: span 3; }
+.tool:nth-child(11){ grid-column: span 5; }
+.tool:nth-child(12){ grid-column: span 5; }
+
+.tool:nth-child(13){ grid-column: span 4; }
+.tool:nth-child(14){ grid-column: span 4; }
+.tool:nth-child(15){ grid-column: span 4; }
+.tool:nth-child(16){ grid-column: span 4; }
 
 .tool {
     display: inline-block;
     background: #222222;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 0.3rem;
     text-indent: 0.3rem;
@@ -600,30 +613,39 @@ h3 {
 #python-left { text-shadow: 0px 0px 20px #fed042; }
 #python-right { text-shadow: 0px 0px 30px #3470a3; }
 
-#tool-git { 
-    background: linear-gradient(to right, #f0563b 0%, #b43b25 100%);
-    text-shadow: 0px 0px 30px #f0563b;
+#tool-c { 
+    background: linear-gradient(to right, #7097ca 0%, #2861a6 100%);
+    text-shadow: 0px 0px 20px #7097ca;
 }
 
-#tool-c { 
+#tool-c-sharp { 
     background: linear-gradient(to right, #6c7bd3 0%, #3541a0 100%);
     text-shadow: 0px 0px 20px #6c7bd3;
 }
 
-#tool-unix { 
+
+
+#tool-sql { 
+    background: linear-gradient(to right, #5298d5 0%, #2597fa 100%);
+    text-shadow: 0px 0px 30px #5298d5;
+}
+
+#tool-asm { 
+    background: linear-gradient(to right, #7777e3 0%, #366ec8e3 100%);
+    text-shadow: 0px 0px 30px #7777e3;
+}
+
+#tool-bash { 
     background: linear-gradient(to right, #169e5a 0%, #0c5d35 100%);
     text-shadow: 0px 0px 30px #169e5a;
 }
 
 #tool-r { 
-    background: linear-gradient(to right, #256fca 0%, #1c5499 80%);
-    text-shadow: 0px 0px 20px #256fca;
+    background: linear-gradient(to right, #297ce3 0%, #1f5eab 80%);
+    text-shadow: 0px 0px 20px #297ce3;
 }
 
-#tool-asm { 
-    background: linear-gradient(to right, #6a94d8 0%, #2c579ce3 100%);
-    text-shadow: 0px 0px 30px #6a94d8;
-}
+
 
 #tool-html { 
     background: linear-gradient(to right, #f16528 0%, #ca4220b2 100%);
@@ -640,7 +662,40 @@ h3 {
     text-shadow: 0px 0px 30px #f6d244c5;
 }
 
-#tool-java, #tool-python, #tool-git, #tool-c, #tool-unix, #tool-r, #tool-asm, #tool-html, #tool-css, #tool-js {
+#tool-ts { 
+    background: linear-gradient(to right, #4e81cf 0%, #176cec 80%);
+    text-shadow: 0px 0px 30px #4e81cf;
+}
+
+
+
+#tool-react { 
+    background: linear-gradient(to right, #62d5f9 0%, #01b3bc 100%);
+    text-shadow: 0px 0px 30px #62d5f9;
+}
+
+#tool-vue { background: linear-gradient(to right, #3eb974 20%, #83a7d4 75%); }
+#vue-left { text-shadow: 0px 0px 20px #3eb974; }
+#vue-right { text-shadow: 0px 0px 30px #83a7d4; }
+
+#tool-express { 
+    background: linear-gradient(to right, #e75137 0%, #d9371b 100%);
+    text-shadow: 0px 0px 30px #e75137;
+}
+
+#tool-node { 
+    background: linear-gradient(to right, #94cb4a 0%, #848572 100%);
+    text-shadow: 0px 0px 30px #94cb4a;
+}
+#node-left { text-shadow: 0px 0px 20px #94cb4a; }
+#node-right { text-shadow: 0px 0px 30px #848572; }
+
+
+
+#tool-java, #tool-python, #tool-c, #tool-c-sharp, 
+#tool-sql, #tool-asm, #tool-bash, #tool-r, 
+#tool-html, #tool-css, #tool-js, #tool-ts,
+#tool-react, #tool-vue, #tool-express, #tool-node {
     -webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1194,6 +1249,7 @@ h3 {
     .project-description li ul { padding-left: 1rem; }
     
     .toolbox-container { width: 90vw; }
+    .tools { grid-gap: 0.5rem; }
     .tool { 
         font-size: 14px; 
         letter-spacing: 0.1rem;
