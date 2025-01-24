@@ -61,6 +61,7 @@ tools.forEach(tool => {
   })
 });
 
+
 // Hide/show extra projects
 function toggleExtraProjects() {
     hideExtraProjects = !hideExtraProjects;
@@ -108,6 +109,7 @@ extraCoursesButton.addEventListener('click', () => {
         extraCoursesButton.innerHTML = "Show Less";
     }
 });
+
 
 // Flip the flap
 var toolTimeline = gsap.timeline();
@@ -197,7 +199,7 @@ gsap.to(".logo-link", {
 
 // Recalculate logo position on resize and reload if max section width reached
 function shiftLogoLink() {
-  if (document.querySelector(".programmer").offsetWidth >= 2250) {
+  if (document.querySelector(".develop").offsetWidth >= 2250) {
     var rightPadding = (window.innerWidth - 2250) / 2;
     document.querySelector(".logo-link").style.right = rightPadding.toString() + "px";
   } else {
